@@ -1,0 +1,142 @@
+---
+const links = [
+  { name: "Inicio", href: "#inicio" },
+  { name: "Áreas de Práctica", href: "#servicios" },
+  { name: "El Estudio", href: "#perfil" },
+];
+---
+
+<header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-6 border-b border-transparent">
+  <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between relative">
+    
+    <a href="#inicio" class="group flex items-center gap-3 relative z-50">
+      <div class="w-10 h-10 bg-white text-navy rounded-sm flex items-center justify-center shadow-lg group-hover:bg-gold transition-colors duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-xl font-serif font-bold text-white tracking-widest leading-none">
+            Brignaleti
+        </span>
+        <span class="text-[10px] text-gold font-sans font-medium tracking-[0.2em] uppercase">
+            Abogados
+        </span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-2">
+      {links.map((link) => (
+        <a href={link.href} class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-sm transition-all duration-300">
+          {link.name}
+        </a>
+      ))}
+      <a href="#contacto" class="ml-4 px-6 py-2 rounded-sm border border-gold text-gold text-sm font-semibold hover:bg-gold hover:text-navy transition-all uppercase tracking-wider">
+        Contacto
+      </a>
+    </nav>
+
+    <button id="mobile-menu-btn" class="md:hidden relative z-50 w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none group">
+        <span class="w-6 h-0.5 bg-gold transition-all duration-300 origin-center line-top"></span>
+        <span class="w-6 h-0.5 bg-gold transition-all duration-300 line-mid"></span>
+        <span class="w-6 h-0.5 bg-gold transition-all duration-300 origin-center line-bottom"></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-[#020617] z-40 translate-x-full invisible transition-all duration-500 ease-in-out flex flex-col items-center justify-center gap-8 md:hidden">
+      
+      {links.map((link) => (
+        <a href={link.href} class="mobile-link text-2xl font-serif text-white hover:text-gold transition-colors">
+          {link.name}
+        </a>
+      ))}
+      
+      <div class="w-12 h-px bg-white/10 my-2"></div>
+      
+      <a href="#contacto" class="mobile-link px-8 py-3 border border-gold text-gold text-lg font-bold tracking-widest uppercase hover:bg-gold hover:text-navy transition-all">
+        Contacto
+      </a>
+      
+      <div class="absolute bottom-10 text-[10rem] font-serif text-white opacity-[0.02] pointer-events-none select-none">IB</div>
+  </div>
+
+</header>
+
+<style>
+    /* Animación del botón */
+    #mobile-menu-btn.open .line-top { transform: translateY(8px) rotate(45deg); }
+    #mobile-menu-btn.open .line-mid { opacity: 0; transform: translateX(-10px); }
+    #mobile-menu-btn.open .line-bottom { transform: translateY(-8px) rotate(-45deg); }
+</style>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('.mobile-link');
+
+  // FIX TYPESCRIPT: Envolvemos toda la lógica en un chequeo de seguridad
+  if (navbar && btn && menu) {
+
+    // Función maestra de colores
+    const updateNavbar = () => {
+      const isScroll = window.scrollY > 20;
+      const isOpen = btn.classList.contains('open');
+
+      if (isOpen) {
+        navbar.classList.add('bg-[#020617]', 'py-6');
+        navbar.classList.remove('bg-navy/95', 'backdrop-blur-md', 'shadow-xl', 'py-4', 'border-transparent');
+        return;
+      }
+
+      if (isScroll) {
+        navbar.classList.add('bg-navy/95', 'backdrop-blur-md', 'shadow-xl', 'py-4');
+        navbar.classList.remove('py-6', 'border-transparent', 'bg-[#020617]');
+      } else {
+        navbar.classList.add('py-6', 'border-transparent');
+        navbar.classList.remove('bg-navy/95', 'backdrop-blur-md', 'shadow-xl', 'py-4', 'bg-[#020617]');
+      }
+    };
+
+    // Función para manejar el cierre del menú
+    const closeMenu = () => {
+        btn.classList.remove('open');
+        menu.classList.add('translate-x-full'); 
+        document.body.style.overflow = ''; 
+        
+        setTimeout(() => {
+            if (!btn.classList.contains('open')) { 
+               menu.classList.add('invisible');
+            }
+        }, 500);
+
+        updateNavbar();
+    };
+
+    // Función para manejar la apertura
+    const openMenu = () => {
+        menu.classList.remove('invisible'); 
+        
+        setTimeout(() => {
+            btn.classList.add('open');
+            menu.classList.remove('translate-x-full'); 
+            document.body.style.overflow = 'hidden'; 
+            updateNavbar();
+        }, 10);
+    };
+
+    // Event Listeners
+    window.addEventListener('scroll', updateNavbar);
+
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('open')) {
+          closeMenu();
+      } else {
+          openMenu();
+      }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+  }
+</script>
