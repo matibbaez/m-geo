@@ -186,6 +186,13 @@ const { title, description = "MGEO | Matías Georgetta. Estructura legal corpora
         isMenuOpen = false;
         menu?.classList.remove('opacity-100', 'pointer-events-auto');
         menu?.classList.add('opacity-0', 'pointer-events-none');
+        
+        // Ocultar los links del menú móvil
+        mobileLinks.forEach(link => {
+          link.classList.remove('opacity-100', 'translate-y-0');
+          link.classList.add('opacity-0', 'translate-y-8');
+        });
+
         const targetLineColor = isScrolled ? 'bg-brand-dark' : 'bg-white';
         line1?.classList.replace('bg-brand-primary', targetLineColor);
         line3?.classList.replace('bg-brand-primary', targetLineColor);
@@ -206,6 +213,13 @@ const { title, description = "MGEO | Matías Georgetta. Estructura legal corpora
         isMenuOpen = true;
         menu?.classList.remove('opacity-0', 'pointer-events-none');
         menu?.classList.add('opacity-100', 'pointer-events-auto');
+        
+        // Mostrar los links del menú móvil con animación
+        mobileLinks.forEach(link => {
+          link.classList.remove('opacity-0', 'translate-y-8');
+          link.classList.add('opacity-100', 'translate-y-0');
+        });
+
         const currentLineColor = isScrolled ? 'bg-brand-dark' : 'bg-white';
         line1?.classList.replace(currentLineColor, 'bg-brand-primary');
         line3?.classList.replace(currentLineColor, 'bg-brand-primary');
@@ -223,6 +237,11 @@ const { title, description = "MGEO | Matías Georgetta. Estructura legal corpora
       };
 
       btn?.addEventListener('click', () => isMenuOpen ? closeMenu() : openMenu());
+
+      // Cerrar menú al hacer clic en un enlace móvil
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
 
       lenis.on('scroll', (e: any) => {
         if (!isMenuOpen) {
