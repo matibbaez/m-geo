@@ -6,7 +6,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especialistas en Derecho Corporativo, Laboral y Representación Deportiva." } = Astro.props;
+const { title, description = "MGEO | Matías Georgetta. Estructura legal corporativa y representación deportiva profesional." } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,14 +21,13 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <title>{title}</title>
   </head>
-  <body class="antialiased flex flex-col min-h-screen selection:bg-brand-primary selection:text-white">
+  <body class="antialiased flex flex-col min-h-screen selection:bg-brand-primary selection:text-white bg-brand-white">
     
     <header id="main-header" class="fixed w-full top-0 z-50 bg-transparent border-b border-transparent transition-all duration-500 py-6">
       <div class="container mx-auto px-6 md:px-10 flex justify-between items-center">
         
-        <a href="#inicio" id="logo-link" class="flex items-center gap-3 md:gap-4 group z-50 pt-2 text-white transition-colors duration-500">
-          
-          <div id="logo-svg" class="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 transition-colors duration-500 group-hover:scale-105">
+        <a href="/" id="logo-link" class="flex items-center gap-3 md:gap-4 group z-50 text-white transition-colors duration-500">
+          <div id="logo-svg" class="w-10 h-10 md:w-11 md:h-11 flex-shrink-0 transition-colors duration-500 group-hover:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
               <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3"/>
               <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -38,35 +37,38 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
               <path d="M75 35 L65 60 C 65 68 85 68 85 60 L75 35 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
           </div>
-
           <div class="flex flex-col justify-center">
-            <h1 class="text-xl md:text-2xl font-heading font-bold leading-none tracking-widest uppercase">
-              M-GEO <span id="logo-accent" class="font-light transition-colors duration-500">ABOGADOS</span>
-            </h1>
-            <span id="logo-sub" class="text-[7px] md:text-[8px] font-body tracking-[0.2em] uppercase font-bold mt-1.5 opacity-90 transition-colors duration-500">Matías Georgetta & Asoc.</span>
+            <span class="text-2xl md:text-3xl font-heading font-bold leading-none tracking-[0.15em] uppercase">
+              MGEO
+            </span>
+            <span id="logo-accent" class="text-[7.5px] md:text-[9px] font-body font-medium tracking-[0.25em] uppercase mt-1 transition-colors duration-500 opacity-90">
+              MATÍAS GEORGETTA
+            </span>
           </div>
         </a>
         
-        <div class="hidden lg:flex items-center gap-10">
+        <div class="hidden lg:flex items-center gap-8">
           <nav>
-            <ul id="nav-links" class="flex items-center gap-10 text-[11px] font-body font-semibold tracking-[0.2em] text-white transition-colors duration-500 uppercase">
+            <ul id="nav-links" class="flex items-center gap-8 text-[11px] font-body font-semibold tracking-[0.2em] text-white transition-colors duration-500 uppercase">
               <li>
-                <a href="#areas" class="flex items-center gap-2 group hover:text-brand-primary transition-colors duration-500">
+                <a href="/" class="flex items-center gap-2 group hover:text-brand-primary transition-colors duration-500">
                   <span class="w-1.5 h-1.5 rounded-full bg-brand-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                  Áreas
+                  Estudio Jurídico
                 </a>
               </li>
               <li>
-                <a href="#estudio" class="flex items-center gap-2 group hover:text-brand-primary transition-colors duration-500">
+                <a href="/sports" class="flex items-center gap-2 group hover:text-brand-primary transition-colors duration-500">
                   <span class="w-1.5 h-1.5 rounded-full bg-brand-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                  La Firma
+                  MGEO Sports
                 </a>
               </li>
             </ul>
           </nav>
-          <div id="nav-divider" class="w-px h-8 bg-white/20 transition-colors duration-500"></div>
-          <a id="nav-btn" href="#contacto" class="inline-flex items-center justify-center border border-white text-white px-8 py-3.5 font-body font-bold text-[10px] uppercase tracking-[0.25em] hover:bg-white hover:text-brand-dark transition-all duration-500">
-            Contacto Privado
+          
+          <div id="nav-divider" class="w-px h-6 bg-white/30 transition-colors duration-500"></div>
+          
+          <a id="nav-cta" href="#contacto" class="text-[10px] font-body font-bold uppercase tracking-[0.2em] text-white border border-white/30 px-6 py-2.5 hover:bg-white hover:text-brand-dark transition-all duration-500 rounded-sm">
+            Contacto
           </a>
         </div>
 
@@ -81,13 +83,13 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
     <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/98 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-500 z-45 flex flex-col pt-36 pb-12 overflow-y-auto">
       <div class="container mx-auto px-8 w-full flex flex-col h-full grow">
         <nav class="flex flex-col gap-8 w-full mt-4">
-          <a href="#areas" class="mobile-link group flex items-center gap-6 border-b border-white/10 pb-6 translate-y-8 opacity-0 transition-all duration-500 delay-100">
+          <a href="/" class="mobile-link group flex items-center gap-6 border-b border-white/10 pb-6 translate-y-8 opacity-0 transition-all duration-500 delay-100">
             <span class="text-brand-primary font-body text-xs tracking-widest opacity-50">01</span>
-            <span class="text-3xl font-heading font-light text-white group-hover:text-brand-primary transition-colors">Áreas</span>
+            <span class="text-3xl font-heading font-light text-white group-hover:text-brand-primary transition-colors">Estudio Jurídico</span>
           </a>
-          <a href="#estudio" class="mobile-link group flex items-center gap-6 border-b border-white/10 pb-6 translate-y-8 opacity-0 transition-all duration-500 delay-200">
+          <a href="/sports" class="mobile-link group flex items-center gap-6 border-b border-white/10 pb-6 translate-y-8 opacity-0 transition-all duration-500 delay-200">
             <span class="text-brand-primary font-body text-xs tracking-widest opacity-50">02</span>
-            <span class="text-3xl font-heading font-light text-white group-hover:text-brand-primary transition-colors">La Firma</span>
+            <span class="text-3xl font-heading font-light text-white group-hover:text-brand-primary transition-colors">MGEO Sports</span>
           </a>
           <a href="#contacto" class="mobile-link group flex items-center gap-6 border-b border-white/10 pb-6 translate-y-8 opacity-0 transition-all duration-500 delay-300">
             <span class="text-brand-primary font-body text-xs tracking-widest opacity-50">03</span>
@@ -105,9 +107,9 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
       <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-[150px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
       <div class="container mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-12 mb-20 relative z-10">
         <div class="md:col-span-12 lg:col-span-5 pr-0 lg:pr-12">
-          <a href="#inicio" class="flex items-center gap-4 mb-6 group inline-flex">
-            
-            <div class="w-10 h-10 text-brand-primary group-hover:scale-105 transition-transform duration-500">
+          
+          <div class="flex items-center gap-4 mb-8 inline-flex">
+            <div class="w-11 h-11 text-brand-primary">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
                 <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3"/>
                 <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -117,54 +119,43 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
                 <path d="M75 35 L65 60 C 65 68 85 68 85 60 L75 35 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               </svg>
             </div>
-
-            <div class="flex flex-col justify-center pt-1">
-              <h2 class="text-2xl font-heading font-bold text-white leading-none tracking-widest uppercase">
-                M-GEO <span class="font-light text-brand-primary">ABOGADOS</span>
-              </h2>
+            <div class="flex flex-col justify-center">
+              <span class="text-2xl md:text-3xl font-heading font-bold text-white leading-none tracking-[0.15em] uppercase">
+                MGEO
+              </span>
+              <span class="text-[7.5px] md:text-[9px] font-body font-medium tracking-[0.25em] uppercase mt-1 text-brand-primary">
+                MATÍAS GEORGETTA
+              </span>
             </div>
-          </a>
+          </div>
+
           <p class="text-sm font-light leading-loose text-gray-400 mb-8 max-w-sm">
-            Especialistas en Derecho Corporativo, Laboral y Civil. Representación de élite para deportistas profesionales a través de M-GEO Sports.
+            Estructura legal corporativa orientada a resultados y agencia de representación para deportistas profesionales.
           </p>
-          <a href="mailto:contacto@mgeoabogados.com" class="inline-flex items-center gap-3 text-brand-primary hover:text-white transition-colors font-body text-[11px] tracking-widest uppercase font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" /><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" /></svg>
-            contacto@mgeoabogados.com
-          </a>
         </div>
+        
         <div class="md:col-span-6 lg:col-span-3">
-          <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Especialidades</span>
+          <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Unidades</span>
           <ul class="space-y-4 text-sm font-light text-gray-400">
-            <li><a href="#areas" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> Corporativo y Comercial</a></li>
-            <li><a href="#areas" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-brand-primary shadow-[0_0_8px_rgba(120,22,22,0.8)]"></span> M-GEO Sports</a></li>
-            <li><a href="#areas" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> Laboral y ART</a></li>
-            <li><a href="#areas" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> Derecho Civil</a></li>
+            <li><a href="/" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> Estudio Jurídico</a></li>
+            <li><a href="/sports" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> MGEO Sports</a></li>
           </ul>
         </div>
+        
         <div class="md:col-span-6 lg:col-span-4">
-          <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Atención</span>
-          <div class="bg-white/5 border border-white/10 p-6 relative group hover:border-brand-primary/50 transition-colors duration-500">
-            <div class="absolute top-0 left-0 w-1 h-full bg-brand-primary"></div>
-            <ul class="space-y-2 text-sm font-light text-gray-400">
-              <li class="text-white font-medium text-base flex items-center gap-3 mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-brand-primary"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" /></svg>
-                Asesoramiento Global
-              </li>
-              <li class="pl-8 font-bold text-brand-primary tracking-widest text-[10px] uppercase">Empresas & Particulares</li>
-              <li class="pl-8 text-xs">Atención presencial y virtual mediante cita previa coordinada.</li>
-            </ul>
-          </div>
+          <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Contacto Central</span>
+          <ul class="space-y-4 text-sm font-light text-gray-400">
+            <li><a href="mailto:contacto@mgeo.com.ar" class="hover:text-white transition-colors">contacto@mgeo.com.ar</a></li>
+            <li>Buenos Aires, Argentina</li>
+          </ul>
         </div>
       </div>
+      
       <div class="container mx-auto px-6 md:px-10 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] uppercase tracking-[0.2em] font-body text-gray-500 font-medium">
-        <p>© {new Date().getFullYear()} M-GEO Abogados. Todos los derechos reservados.</p>
-        <div class="flex items-center gap-2"><span>Diseño y Desarrollo por</span><a href="#" class="text-brand-primary hover:text-white transition-colors font-bold">VisionPath</a></div>
+        <p>© {new Date().getFullYear()} MGEO. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-2"><span>Diseño y Arquitectura por</span><a href="#" class="text-brand-primary hover:text-white transition-colors font-bold">VisionPath</a></div>
       </div>
     </footer>
-
-    <a href="https://wa.me/5491100000000" target="_blank" aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-105 hover:bg-white hover:text-[#25D366] transition-all duration-500 flex items-center justify-center border border-white/10">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp relative z-10" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-    </a>
 
     <script>
       import Lenis from 'lenis';
@@ -180,10 +171,10 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
       const logoLink = document.getElementById('logo-link');
       const logoSvg = document.getElementById('logo-svg');
       const logoAccent = document.getElementById('logo-accent');
-      const logoSub = document.getElementById('logo-sub');
       const navLinks = document.getElementById('nav-links');
       const navDivider = document.getElementById('nav-divider');
-      const navBtn = document.getElementById('nav-btn');
+      const navCta = document.getElementById('nav-cta');
+      
       const line1 = document.getElementById('line1');
       const line2 = document.getElementById('line2');
       const line3 = document.getElementById('line3');
@@ -195,7 +186,6 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
         isMenuOpen = false;
         menu?.classList.remove('opacity-100', 'pointer-events-auto');
         menu?.classList.add('opacity-0', 'pointer-events-none');
-        
         const targetLineColor = isScrolled ? 'bg-brand-dark' : 'bg-white';
         line1?.classList.replace('bg-brand-primary', targetLineColor);
         line3?.classList.replace('bg-brand-primary', targetLineColor);
@@ -204,15 +194,9 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
         line2?.classList.remove('opacity-0', 'translate-x-4');
         line3?.classList.remove('-rotate-45', '-translate-y-[8px]');
         
-        mobileLinks.forEach(link => {
-          link.classList.remove('translate-y-0', 'opacity-100');
-          link.classList.add('translate-y-8', 'opacity-0');
-        });
-        
         if (isScrolled) {
             header?.classList.replace('bg-transparent', 'bg-white/95');
-            header?.classList.replace('border-transparent', 'border-gray-100');
-            header?.classList.add('backdrop-blur-xl', 'shadow-sm');
+            header?.classList.add('backdrop-blur-xl', 'shadow-sm', 'border-gray-100');
             logoLink?.classList.replace('text-white', 'text-brand-dark');
         }
         lenis.start();
@@ -222,7 +206,6 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
         isMenuOpen = true;
         menu?.classList.remove('opacity-0', 'pointer-events-none');
         menu?.classList.add('opacity-100', 'pointer-events-auto');
-        
         const currentLineColor = isScrolled ? 'bg-brand-dark' : 'bg-white';
         line1?.classList.replace(currentLineColor, 'bg-brand-primary');
         line3?.classList.replace(currentLineColor, 'bg-brand-primary');
@@ -231,15 +214,9 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
         line2?.classList.add('opacity-0', 'translate-x-4');
         line3?.classList.add('-rotate-45', '-translate-y-[8px]');
         
-        mobileLinks.forEach(link => {
-          link.classList.remove('translate-y-8', 'opacity-0');
-          link.classList.add('translate-y-0', 'opacity-100');
-        });
-        
         if (isScrolled) {
             header?.classList.replace('bg-white/95', 'bg-transparent');
-            header?.classList.replace('border-gray-100', 'border-transparent');
-            header?.classList.remove('backdrop-blur-xl', 'shadow-sm');
+            header?.classList.remove('backdrop-blur-xl', 'shadow-sm', 'border-gray-100');
             logoLink?.classList.replace('text-brand-dark', 'text-white');
         }
         lenis.stop();
@@ -247,68 +224,45 @@ const { title, description = "M-GEO Abogados | Matías Georgetta & Asoc. Especia
 
       btn?.addEventListener('click', () => isMenuOpen ? closeMenu() : openMenu());
 
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-          e.preventDefault();
-          const target = e.currentTarget as HTMLElement;
-          const targetId = target.getAttribute('href');
-          if (!targetId || targetId === '#') return;
-          const targetElement = document.querySelector(targetId) as HTMLElement;
-          if (targetElement) {
-            if (target.classList.contains('mobile-link') || target.closest('#mobile-menu')) {
-              closeMenu();
-              setTimeout(() => lenis.scrollTo(targetElement, { offset: -100, duration: 2 }), 300);
-            } else {
-              lenis.scrollTo(targetElement, { offset: -100, duration: 2 });
-            }
-          }
-        });
-      });
-
       lenis.on('scroll', (e: any) => {
         if (!isMenuOpen) {
           if (e.scroll > 50 && !isScrolled) {
             isScrolled = true;
             header?.classList.replace('bg-transparent', 'bg-white/95');
-            header?.classList.replace('border-transparent', 'border-gray-100');
-            header?.classList.add('backdrop-blur-xl', 'shadow-sm');
+            header?.classList.add('backdrop-blur-xl', 'shadow-sm', 'border-gray-100');
             header?.classList.replace('py-6', 'py-4');
-
+            
             logoLink?.classList.replace('text-white', 'text-brand-dark');
             logoSvg?.classList.add('text-brand-primary');
             logoAccent?.classList.add('text-brand-primary');
-            logoSub?.classList.add('text-brand-primary');
-
+            
             navLinks?.classList.replace('text-white', 'text-brand-dark');
-            navDivider?.classList.replace('bg-white/20', 'bg-gray-200');
-
-            navBtn?.classList.replace('border-white', 'border-brand-dark');
-            navBtn?.classList.replace('text-white', 'text-brand-dark');
-            navBtn?.classList.replace('hover:bg-white', 'hover:bg-brand-dark');
-            navBtn?.classList.replace('hover:text-brand-dark', 'hover:text-brand-primary');
+            navDivider?.classList.replace('bg-white/30', 'bg-gray-200');
+            
+            navCta?.classList.replace('text-white', 'text-brand-primary');
+            navCta?.classList.replace('border-white/30', 'border-brand-primary/50');
+            navCta?.classList.replace('hover:bg-white', 'hover:bg-brand-primary');
+            navCta?.classList.replace('hover:text-brand-dark', 'hover:text-white');
 
             line1?.classList.replace('bg-white', 'bg-brand-dark');
             line3?.classList.replace('bg-white', 'bg-brand-dark');
-            
           } else if (e.scroll <= 50 && isScrolled) {
             isScrolled = false;
             header?.classList.replace('bg-white/95', 'bg-transparent');
-            header?.classList.replace('border-gray-100', 'border-transparent');
-            header?.classList.remove('backdrop-blur-xl', 'shadow-sm');
+            header?.classList.remove('backdrop-blur-xl', 'shadow-sm', 'border-gray-100');
             header?.classList.replace('py-4', 'py-6');
-
+            
             logoLink?.classList.replace('text-brand-dark', 'text-white');
             logoSvg?.classList.remove('text-brand-primary');
             logoAccent?.classList.remove('text-brand-primary');
-            logoSub?.classList.remove('text-brand-primary');
-
+            
             navLinks?.classList.replace('text-brand-dark', 'text-white');
-            navDivider?.classList.replace('bg-gray-200', 'bg-white/20');
+            navDivider?.classList.replace('bg-gray-200', 'bg-white/30');
 
-            navBtn?.classList.replace('border-brand-dark', 'border-white');
-            navBtn?.classList.replace('text-brand-dark', 'text-white');
-            navBtn?.classList.replace('hover:bg-brand-dark', 'hover:bg-white');
-            navBtn?.classList.replace('hover:text-brand-primary', 'hover:text-brand-dark');
+            navCta?.classList.replace('text-brand-primary', 'text-white');
+            navCta?.classList.replace('border-brand-primary/50', 'border-white/30');
+            navCta?.classList.replace('hover:bg-brand-primary', 'hover:bg-white');
+            navCta?.classList.replace('hover:text-white', 'hover:text-brand-dark');
 
             line1?.classList.replace('bg-brand-dark', 'bg-white');
             line3?.classList.replace('bg-brand-dark', 'bg-white');
