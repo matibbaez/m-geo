@@ -11,44 +11,144 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto max-w-5xl relative z-10 w-full">
       <div class="inline-flex items-center gap-3 mb-8 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-sm">
         <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-        <span class="text-gray-300 font-body text-[10px] tracking-widest uppercase font-bold">Unidad Deportiva de MGEO</span>
+        <span class="text-gray-300 font-body text-[10px] tracking-widest uppercase font-bold">Agencia de Representación</span>
       </div>
 
       <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tight">
-        Llevamos tu carrera <br />
-        <span class="italic font-light text-gray-400">al próximo nivel<span class="text-brand-primary">.</span></span>
+        Círculo cerrado <br />
+        <span class="italic font-light text-gray-400">talento de élite<span class="text-brand-primary">.</span></span>
       </h1>
 
       <p class="text-lg md:text-xl font-light text-gray-400 max-w-2xl mb-12 leading-relaxed border-l-2 border-brand-primary pl-6">
-        Representación estratégica integral para futbolistas profesionales. Negociación, blindaje jurídico y desarrollo deportivo bajo estándares internacionales.
+        Scouting y selección exclusiva. No buscamos cantidad, gestionamos proyección. Representación estratégica integral bajo los más altos estándares internacionales de FIFA.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center gap-6">
-        <a href="#contacto-sports" class="bg-brand-primary text-white px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 w-full sm:w-auto text-center shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)]">
-          Contactar Agencia
+        <a href="#talentos" class="bg-brand-primary text-white px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 w-full sm:w-auto text-center shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)]">
+          Ver Roster Oficial
         </a>
         <a href="#perfil-agente" class="text-white hover:text-brand-primary transition-colors font-body font-semibold text-[11px] uppercase tracking-[0.2em] group flex items-center justify-center gap-4 w-full sm:w-auto py-4">
-          Conocer al Agente <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-y-2 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+          Perfil de Agencia <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-y-2 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="talentos" class="py-24 md:py-32 bg-[#161616] text-white px-6 border-y border-white/5 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none hidden md:block"></div>
+
+    <div class="container mx-auto max-w-6xl relative z-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Representación Oficial</span>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white tracking-tight">
+            Talentos Exclusivos.
+          </h2>
+        </div>
+        <div class="pb-2 hidden md:block">
+          <a href="https://instagram.com/matias.georgetta" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors font-body text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-3 border-b border-gray-700 hover:border-brand-primary pb-2 group">
+            Ver firmas en Instagram
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-2">
+        
+        <div class="md:col-span-8 md:row-span-2 group relative aspect-[4/5] md:aspect-auto md:h-[650px] bg-brand-dark overflow-hidden cursor-pointer md:rounded-sm">
+          <img src="/elian-jugador.png" alt="Mira Acosta - Lanús" class="absolute inset-0 w-full h-full object-cover object-top md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/70 to-transparent opacity-90 md:group-hover:opacity-80 transition-opacity duration-700"></div>
+          
+          <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 flex flex-col justify-end items-start z-20">
+            <span class="bg-brand-primary text-white px-3 py-1.5 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm mb-4 inline-block">Defensor / 1ra División</span>
+            <h3 class="text-4xl md:text-6xl font-heading font-bold text-white mb-2">Mira Acosta</h3>
+            <div class="w-12 h-px bg-white md:w-0 md:group-hover:w-24 transition-all duration-700 ease-out mt-3 mb-3 md:mt-4 md:mb-4"></div>
+            <p class="text-[10px] md:text-xs font-body font-medium text-gray-300 uppercase tracking-[0.2em]">Club Atlético Lanús</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 md:row-span-1 group relative aspect-[4/5] md:aspect-auto md:h-[321px] bg-brand-dark overflow-hidden cursor-pointer md:rounded-sm">
+          <img src="/fede-jugador.png" alt="Federico Otero - Atlanta" class="absolute inset-0 w-full h-full object-cover md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/70 to-transparent opacity-90 md:group-hover:opacity-80 transition-opacity duration-700"></div>
+          
+          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 items-start z-20 flex flex-col">
+            <span class="bg-brand-primary text-white px-3 py-1 text-[9px] font-bold tracking-[0.2em] uppercase rounded-sm mb-3 inline-block">Volante / Cat. '04</span>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-1">Federico Otero</h3>
+            <div class="w-8 h-px bg-white md:w-0 md:group-hover:w-12 transition-all duration-700 ease-out my-3"></div>
+            <p class="text-[10px] font-body font-medium text-gray-300 uppercase tracking-[0.15em]">Club Atlético Atlanta</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 md:row-span-1 group relative aspect-[4/5] md:aspect-auto md:h-[321px] bg-brand-dark overflow-hidden cursor-pointer md:rounded-sm">
+          <img src="/ramiro-jugador.png" alt="Ramiro Amembi - Sportivo Italiano" class="absolute inset-0 w-full h-full object-cover md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/70 to-transparent opacity-90 md:group-hover:opacity-80 transition-opacity duration-700"></div>
+          
+          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 items-start z-20 flex flex-col">
+            <span class="bg-brand-primary text-white px-3 py-1 text-[9px] font-bold tracking-[0.2em] uppercase rounded-sm mb-3 inline-block">Delantero / Cat. '05</span>
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-white mb-1">Ramiro Amembi</h3>
+            <div class="w-8 h-px bg-white md:w-0 md:group-hover:w-12 transition-all duration-700 ease-out my-3"></div>
+            <p class="text-[10px] font-body font-medium text-gray-300 uppercase tracking-[0.15em]">Sportivo Italiano</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-6 md:row-span-1 group relative aspect-[4/5] md:aspect-auto md:h-[350px] bg-brand-dark overflow-hidden cursor-pointer md:rounded-sm">
+          <img src="/matias-jugador.png" alt="Matías Lucero - Arsenal" class="absolute inset-0 w-full h-full object-cover object-top md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-[#161616]/70 to-transparent opacity-90 md:group-hover:opacity-80 transition-opacity duration-700"></div>
+          
+          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 items-start z-20 flex flex-col">
+            <span class="bg-brand-primary text-white px-3 py-1.5 text-[9px] font-bold tracking-[0.2em] uppercase rounded-sm mb-3 inline-block">Volante / Cat. '03</span>
+            <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-1">Matías Lucero</h3>
+            <div class="w-8 h-px bg-white md:w-0 md:group-hover:w-16 transition-all duration-700 ease-out my-3"></div>
+            <p class="text-[10px] font-body font-medium text-gray-300 uppercase tracking-[0.15em]">Arsenal de Sarandí</p>
+          </div>
+        </div>
+
+        <div class="md:col-span-6 md:row-span-1 bg-brand-dark border border-white/5 p-8 md:p-12 flex flex-col justify-center md:rounded-sm relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 blur-[40px]"></div>
+          <svg class="w-8 h-8 text-brand-primary mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+          <h3 class="text-2xl font-heading font-bold text-white mb-3">Admisión Cerrada</h3>
+          <p class="text-sm font-light text-gray-400 leading-relaxed">
+            MGEO Sports opera exclusivamente mediante el scouting interno y selección directa de nuestra red de ojeadores. No recibimos ni evaluamos perfiles por canales públicos.
+          </p>
+        </div>
+
+        <div class="md:hidden flex justify-center py-8">
+          <a href="https://instagram.com/matias.georgetta" target="_blank" rel="noopener noreferrer" class="text-white bg-brand-primary px-8 py-4 font-body text-[10px] uppercase tracking-[0.2em] font-bold flex items-center gap-3">
+            Ver redes oficiales
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
   <section id="perfil-agente" class="py-24 md:py-32 bg-white px-6 border-b border-gray-100">
     <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        <div class="lg:col-span-5">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <div class="lg:col-span-5 relative order-2 lg:order-1 mt-10 lg:mt-0">
+          <div class="aspect-[4/5] overflow-hidden rounded-sm relative z-10 shadow-2xl">
+            <img src="/matias-geo.png" alt="Matías Georgetta - Agente FIFA" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700" />
+            <div class="absolute inset-0 bg-brand-dark/10 hover:bg-transparent transition-colors duration-500"></div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-brand-primary/20 z-0 rounded-sm hidden md:block"></div>
+        </div>
+
+        <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
           <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Director & Agente</span>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark leading-[1.1] mb-8 tracking-tight">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark leading-[1.1] mb-6 tracking-tight">
             Matías Georgetta<br/>
             <span class="italic font-light text-gray-400">Agente Oficial.</span>
           </h2>
-          <p class="text-gray-600 font-light text-base md:text-lg leading-relaxed mb-8">
-            MGEO Sports fusiona el conocimiento exhaustivo del marco legal con la pasión por el fútbol. Al estar respaldados por nuestra propia firma jurídica, garantizamos que cada paso en tu carrera esté protegido, blindado y optimizado.
+          <p class="text-gray-600 font-light text-base md:text-lg leading-relaxed mb-10">
+            MGEO Sports fusiona el conocimiento exhaustivo del marco legal con la pasión por el fútbol. Al estar respaldados por nuestra propia firma jurídica, garantizamos que la carrera de nuestros seleccionados esté protegida, blindada y optimizada.
           </p>
           
-          <div class="flex flex-col gap-4 pt-6 border-t border-gray-100">
-            <div class="flex items-center gap-4 bg-[#F9F8F6] p-4 rounded-sm border border-gray-100">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
+            <div class="flex items-center gap-4 bg-[#F9F8F6] p-4 rounded-sm border border-gray-100 w-full sm:w-auto shadow-sm">
               <div class="w-12 h-12 bg-brand-dark text-brand-primary flex items-center justify-center rounded-sm shrink-0">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
               </div>
@@ -57,98 +157,21 @@ import Layout from '../layouts/Layout.astro';
                 <p class="font-heading font-bold text-brand-dark text-xl">Licencia FIFA ID 202305-1916</p>
               </div>
             </div>
+            
             <a href="https://instagram.com/matias.georgetta" target="_blank" rel="noopener noreferrer" class="text-sm font-body font-medium text-gray-500 hover:text-brand-primary transition-colors flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
               @matias.georgetta
             </a>
           </div>
-        </div>
-        
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-[#F9F8F6] p-8 md:p-10 border border-gray-100 hover:border-brand-primary/30 transition-colors">
-              <svg class="w-8 h-8 text-brand-primary mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
-              <h3 class="text-xl font-heading font-bold text-brand-dark mb-3">Respaldo Jurídico</h3>
-              <p class="text-gray-500 text-sm font-light leading-relaxed">No tercerizamos lo legal. Somos un estudio jurídico y una agencia al mismo tiempo. Blindamos tus contratos de punta a punta.</p>
-            </div>
-            <div class="bg-brand-dark p-8 md:p-10 border border-brand-dark transform sm:translate-y-8 shadow-2xl">
-              <svg class="w-8 h-8 text-brand-primary mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-              <h3 class="text-xl font-heading font-bold text-white mb-3">Proyección Global</h3>
-              <p class="text-gray-400 text-sm font-light leading-relaxed">Conexiones directas y licencia oficial de FIFA que nos permite operar, negociar y realizar transferencias en todo el mundo sin intermediarios secundarios.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-brand-dark p-6 border border-brand-dark shadow-xl">
+              <h3 class="text-lg font-heading font-bold text-white mb-2">Proyección Global</h3>
+              <p class="text-gray-400 text-xs font-light leading-relaxed">Conexiones directas y licencia oficial para negociar en todo el mundo sin intermediarios.</p>
             </div>
           </div>
+
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="talentos" class="py-24 md:py-32 bg-[#0a0a0a] text-white px-6 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-    <div class="container mx-auto max-w-6xl relative z-10">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Representación Oficial</span>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-white">Team MGEO.</h2>
-        </div>
-        <a href="https://instagram.com/matias.georgetta" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors font-body text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-3 border-b border-gray-700 hover:border-brand-primary pb-2 group">
-          Ver firmas en Instagram
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10 border border-white/10">
-        
-        <div class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=800&auto=format&fit=crop" alt="Jugador MGEO" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" />
-          
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500"></div>
-          
-          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span class="text-brand-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Cat. 2004</span>
-            <h3 class="text-xl md:text-2xl font-heading font-bold text-white mb-1">Lucas <br/> Martínez</h3>
-            <div class="w-6 h-px bg-brand-primary my-3 group-hover:w-12 transition-all duration-500"></div>
-            <p class="text-xs font-body font-light text-gray-400 uppercase tracking-wider">Club Atlético Independiente</p>
-          </div>
-        </div>
-
-        <div class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=800&auto=format&fit=crop" alt="Jugador MGEO" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500"></div>
-          
-          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span class="text-brand-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Cat. 2006</span>
-            <h3 class="text-xl md:text-2xl font-heading font-bold text-white mb-1">Mateo <br/> Fernández</h3>
-            <div class="w-6 h-px bg-brand-primary my-3 group-hover:w-12 transition-all duration-500"></div>
-            <p class="text-xs font-body font-light text-gray-400 uppercase tracking-wider">Boca Juniors</p>
-          </div>
-        </div>
-
-        <div class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1600250395353-841dbadceeb3?q=80&w=800&auto=format&fit=crop" alt="Jugador MGEO" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500"></div>
-          
-          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span class="text-brand-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Cat. 2003</span>
-            <h3 class="text-xl md:text-2xl font-heading font-bold text-white mb-1">Tomás <br/> Silva</h3>
-            <div class="w-6 h-px bg-brand-primary my-3 group-hover:w-12 transition-all duration-500"></div>
-            <p class="text-xs font-body font-light text-gray-400 uppercase tracking-wider">San Lorenzo</p>
-          </div>
-        </div>
-
-        <div class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer">
-          <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=800&auto=format&fit=crop" alt="Jugador MGEO" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500"></div>
-          
-          <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-            <span class="text-brand-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">1ra División</span>
-            <h3 class="text-xl md:text-2xl font-heading font-bold text-white mb-1">Agustín <br/> Gómez</h3>
-            <div class="w-6 h-px bg-brand-primary my-3 group-hover:w-12 transition-all duration-500"></div>
-            <p class="text-xs font-body font-light text-gray-400 uppercase tracking-wider">Club Atlético Banfield</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -157,9 +180,9 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto max-w-6xl">
       
       <div class="text-center mb-20">
-        <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Nuestros Servicios</span>
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark tracking-tight">Estructura Deportiva.</h2>
-        <p class="text-gray-500 font-light text-lg mt-4 max-w-2xl mx-auto">Cubrimos todas las aristas necesarias para el desarrollo integral del deportista profesional.</p>
+        <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Nuestra Infraestructura</span>
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark tracking-tight">Gestión Deportiva.</h2>
+        <p class="text-gray-500 font-light text-lg mt-4 max-w-2xl mx-auto">Nuestros representados acceden a una estructura de protección y desarrollo que cubre todas sus necesidades profesionales.</p>
       </div>
 
       <div class="space-y-12">
@@ -264,127 +287,19 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section id="contacto-sports" class="py-24 md:py-32 bg-brand-dark text-white px-6 border-t border-white/5">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        
-        <div class="lg:col-span-5">
-          <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-            Línea Directa Sports
-          </span>
-          <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 tracking-tight leading-[1.1] text-white">
-            Iniciá tu camino <br/> <span class="italic font-light text-gray-400">profesional.</span>
-          </h2>
-          <p class="text-gray-400 font-light mb-10 leading-relaxed text-base md:text-lg">
-            Si sos jugador y buscás representación, o si sos club buscando cerrar operaciones u obtener asesoría legal, contactanos directo a través de este formulario.
-          </p>
-          
-          <div class="space-y-6">
-            <a href="mailto:sports@mgeo.com.ar" class="flex items-center gap-5 group">
-              <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white group-hover:bg-brand-primary group-hover:border-brand-primary transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
-              </div>
-              <div class="flex flex-col">
-                <span class="font-body text-[10px] tracking-[0.2em] uppercase text-gray-500 mb-1">Correo MGEO Sports</span>
-                <span class="font-medium text-white group-hover:text-brand-primary transition-colors text-sm">sports@mgeo.com.ar</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-7 w-full">
-          <div class="bg-[#161616] p-8 md:p-12 border border-white/5 relative shadow-2xl">
-            <div class="absolute top-0 left-0 w-full h-1 bg-brand-primary"></div>
-            
-            <form id="wp-form-sports" class="space-y-8 mt-2">
-              
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="relative group">
-                  <label for="nombre_sports" class="block text-[10px] font-body tracking-[0.2em] uppercase text-gray-500 group-focus-within:text-brand-primary mb-2 transition-colors">Jugador / Institución</label>
-                  <input type="text" id="nombre_sports" name="nombre_sports" class="w-full bg-transparent border-b border-white/10 pb-3 text-white text-base focus:outline-none focus:border-brand-primary transition-colors font-light" required>
-                </div>
-                
-                <div class="relative group">
-                  <label for="contacto_dato_sports" class="block text-[10px] font-body tracking-[0.2em] uppercase text-gray-500 group-focus-within:text-brand-primary mb-2 transition-colors">Teléfono / Email</label>
-                  <input type="text" id="contacto_dato_sports" name="contacto_dato_sports" class="w-full bg-transparent border-b border-white/10 pb-3 text-white text-base focus:outline-none focus:border-brand-primary transition-colors font-light" required>
-                </div>
-              </div>
-              
-              <div class="relative group">
-                <label for="area_sports" class="block text-[10px] font-body tracking-[0.2em] uppercase text-gray-500 group-focus-within:text-brand-primary mb-2 transition-colors">Motivo de contacto</label>
-                <select id="area_sports" name="area_sports" class="w-full bg-transparent border-b border-white/10 pb-3 text-white text-base focus:outline-none focus:border-brand-primary transition-colors font-light appearance-none" required>
-                  <option value="" disabled selected class="text-gray-900">Seleccione un motivo...</option>
-                  <option value="Representación de Jugador" class="text-gray-900">Representación de Jugador</option>
-                  <option value="Asesoramiento a Clubes / Mandatos" class="text-gray-900">Asesoramiento a Clubes / Mandatos</option>
-                  <option value="Asesoría Legal / Derecho de Formación" class="text-gray-900">Asesoría Legal / Derecho de Formación</option>
-                  <option value="Sponsoreo y Marcas" class="text-gray-900">Sponsoreo y Marcas</option>
-                  <option value="Otro" class="text-gray-900">Otro</option>
-                </select>
-              </div>
-              
-              <div class="relative group">
-                <label for="mensaje_sports" class="block text-[10px] font-body tracking-[0.2em] uppercase text-gray-500 group-focus-within:text-brand-primary mb-2 transition-colors">Mensaje o datos adicionales</label>
-                <textarea id="mensaje_sports" name="mensaje_sports" rows="4" placeholder="Si sos jugador dejá tu edad, club actual y posición. Si sos club, decinos cómo podemos ayudar..." class="w-full bg-transparent border-b border-white/10 pb-3 text-white text-base focus:outline-none focus:border-brand-primary transition-colors font-light resize-none placeholder:text-gray-700" required></textarea>
-              </div>
-              
-              <button type="submit" class="w-full bg-brand-primary text-white py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 mt-4 flex items-center justify-center gap-3 shadow-lg shadow-brand-primary/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-                Enviar por WhatsApp
-              </button>
-            </form>
-          </div>
-        </div>
-
-      </div>
+  <section class="py-24 md:py-32 bg-brand-dark text-white px-6 border-t border-white/5 relative overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px]"></div>
+    <div class="container mx-auto max-w-3xl text-center relative z-10">
+      <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Consultas Institucionales</span>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6 text-white tracking-tight">Business Inquiries.</h2>
+      <p class="text-gray-400 font-light mb-10 text-sm md:text-base leading-relaxed">
+        Para asuntos corporativos, vínculos comerciales, propuestas de clubes, academias y marcas, nuestra dirección se encuentra a disposición.
+      </p>
+      <a href="mailto:sports@mgeo.com.ar" class="inline-flex items-center gap-4 bg-white text-brand-dark px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-brand-primary hover:text-white transition-all duration-500 shadow-xl shadow-white/5">
+        Contactar a Dirección
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+      </a>
     </div>
   </section>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const wpForm = document.getElementById('wp-form-sports') as HTMLFormElement | null;
-      
-      if (wpForm) {
-        wpForm.addEventListener('submit', function(e) {
-          e.preventDefault(); 
-
-          const nombreInput = document.getElementById('nombre_sports') as HTMLInputElement | null;
-          const contactoInput = document.getElementById('contacto_dato_sports') as HTMLInputElement | null;
-          const selectArea = document.getElementById('area_sports') as HTMLSelectElement | null;
-          const mensajeInput = document.getElementById('mensaje_sports') as HTMLTextAreaElement | null;
-
-          if (!nombreInput || !contactoInput || !selectArea || !mensajeInput) return;
-
-          const nombre = nombreInput.value;
-          const contacto = contactoInput.value;
-          const area = selectArea.options[selectArea.selectedIndex].value;
-          const mensaje = mensajeInput.value;
-
-          // ⚠️ IMPORTANTE: PONER EL NÚMERO DE TELÉFONO DEL ÁREA SPORTS ⚠️
-          const numeroWhatsApp = "5491100000000";
-
-          const textoBase = 
-`Hola MGEO Sports, me contacto desde la web para realizar una consulta.
-
-*Datos del remitente:*
-👤 Jugador / Entidad: ${nombre}
-📞 Contacto alternativo: ${contacto}
-
-*Motivo principal:*
-⚽ ${area}
-
-*Detalle / Información extra:*
-${mensaje}
-
-Aguardo sus comentarios. ¡Gracias!`;
-
-          const textoCodificado = encodeURIComponent(textoBase);
-          const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
-          
-          window.open(urlWhatsApp, '_blank');
-        });
-      }
-    });
-  </script>
 
 </Layout>
