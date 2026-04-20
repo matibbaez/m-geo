@@ -36,81 +36,110 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="py-24 md:py-32 bg-white px-6">
+  <section class="py-24 md:py-40 bg-white px-6">
     <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-        <div class="lg:col-span-5 relative">
-          <div class="aspect-[4/5] overflow-hidden rounded-sm relative z-10 shadow-[30px_30px_60px_-15px_rgba(0,0,0,0.1)]">
-            <img src="/matias-geo.png" alt="Matías Georgetta" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-out" />
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <div class="lg:col-span-5 lg:sticky lg:top-32">
+          <div class="relative group">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-[1.5s] ease-out">
+              <img src="/matias-geo.png" alt="Matías Georgetta" class="w-full h-full object-cover object-top" />
+            </div>
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-light -z-0 opacity-50"></div>
+            <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-dark/5 -z-10"></div>
           </div>
-          <div class="absolute -top-10 -left-10 w-32 h-32 bg-brand-light -z-0"></div>
-          <div class="absolute bottom-10 -right-4 w-full h-full border border-brand-primary/10 -z-10"></div>
         </div>
 
-        <div class="lg:col-span-7">
-          <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Dirección General</span>
-          <h2 class="text-4xl md:text-6xl font-heading font-bold text-brand-dark mb-8 tracking-tight leading-tight">
-            Matías Georgetta<br/>
-            <span class="italic font-light text-gray-400 text-3xl md:text-5xl">Visión e Integridad.</span>
-          </h2>
-          <div class="space-y-6 text-gray-600 font-light text-lg leading-relaxed border-l-2 border-brand-light pl-8">
-            <p>
-              Bajo la firma MGEO, hemos consolidado una estructura única que combina el rigor técnico del <span class="text-brand-dark font-medium">Estudio Jurídico</span> con la visión global de nuestra <span class="text-brand-dark font-medium">Agencia Deportiva</span>.
-            </p>
-            <p>
-              Nuestro compromiso es simple: brindar una defensa inquebrantable de los intereses de nuestros clientes, ya sea en el directorio de una empresa o en la mesa de negociación de un club internacional.
-            </p>
+        <div class="lg:col-span-7 lg:pl-12">
+          <div class="inline-flex items-center gap-4 mb-8">
+            <div class="w-10 h-px bg-brand-primary"></div>
+            <span class="text-brand-primary font-body font-bold tracking-[0.4em] uppercase text-[10px]">Liderazgo Estratégico</span>
           </div>
           
-          <div class="mt-12 flex items-center gap-6">
-             <div class="bg-brand-dark text-white px-6 py-4 rounded-sm">
-                <p class="text-[9px] uppercase tracking-widest text-brand-primary font-bold mb-1">Licencia Oficial</p>
-                <p class="font-heading font-bold text-lg">FIFA ID 202305-1916</p>
-             </div>
+          <h2 class="text-5xl md:text-7xl font-heading font-bold text-brand-dark mb-10 tracking-tighter leading-[0.95]">
+            Matías Georgetta<br/>
+            <span class="text-gray-300 font-light italic">Fundador & Director.</span>
+          </h2>
+          
+          <div class="space-y-8 text-gray-600 font-light text-lg md:text-xl leading-relaxed max-w-2xl">
+            <!-- <p class="font-heading italic text-2xl md:text-3xl text-brand-dark leading-snug">
+              "El derecho y el alto rendimiento exigen lo mismo: estrategia, precisión y resultados."
+            </p> -->
+            
+            <p class="text-base md:text-lg">
+              MGEO nace para brindar una estructura legal que comprenda tanto la norma como el negocio. Fusionamos la rigurosidad de nuestro <span class="text-brand-dark font-medium">Estudio Jurídico</span> con la visión global de nuestra <span class="text-brand-dark font-medium">Agencia Deportiva</span>, blindando el futuro de nuestros clientes en cada escenario.
+            </p>
+            
+            <div class="pt-10 border-t border-gray-100 flex flex-col sm:flex-row items-start sm:items-center gap-10">
+              <div class="flex-1">
+                <p class="text-[10px] uppercase tracking-widest text-brand-primary font-bold mb-2">Visión Corporativa</p>
+                <p class="text-sm text-gray-500 leading-relaxed">Protección de activos y resolución estratégica de conflictos complejos.</p>
+              </div>
+              <div class="hidden sm:block w-px h-12 bg-gray-100"></div>
+              <div class="flex-1">
+                <p class="text-[10px] uppercase tracking-widest text-brand-primary font-bold mb-2">Proyección Deportiva</p>
+                <p class="text-sm text-gray-500 leading-relaxed">Gestión de carrera bajo los más altos estándares competitivos.</p>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="unidades" class="py-24 bg-brand-dark relative overflow-hidden">
-    <div class="container mx-auto max-w-6xl px-6 relative z-10">
-      <div class="text-center mb-20">
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Unidades Operativas</h2>
-        <div class="w-20 h-px bg-brand-primary mx-auto"></div>
+  <section id="unidades" class="py-24 md:py-32 bg-brand-dark relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+      
+      <div class="text-center mb-16 md:mb-24">
+        <span class="text-brand-primary font-body font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 block">Elige tu camino</span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 tracking-tight">Unidades Operativas</h2>
+        <div class="w-12 h-[2px] bg-brand-primary mx-auto"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
         
-        <a href="/estudio" class="group relative aspect-video md:aspect-[4/5] bg-[#1a1a1a] overflow-hidden flex flex-col justify-end p-8 md:p-12 border border-white/5 hover:border-brand-primary/30 transition-all duration-700">
-           <div class="absolute inset-0 z-0 opacity-30 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
-           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent group-hover:via-brand-dark/20 transition-all duration-700"></div>
+        <a href="/estudio" class="group relative w-full min-h-[450px] lg:min-h-[650px] overflow-hidden flex flex-col justify-end p-8 md:p-14 border border-white/5 bg-[#0a0a0a]">
+           <div class="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-[1.5s] ease-out grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent lg:via-brand-dark/60 lg:group-hover:via-brand-dark/80 transition-all duration-700"></div>
            
-           <div class="relative z-20">
-             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Áreas Civiles y Corporativas</span>
-             <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">MGEO Abogados</h3>
-             <p class="text-gray-400 font-light text-sm max-w-xs mb-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+           <div class="relative z-20 w-full transform transition-all duration-500 lg:translate-y-10 lg:group-hover:translate-y-0">
+             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-3 block">Áreas Civiles y Corporativas</span>
+             <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">MGEO Abogados</h3>
+             
+             <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-sm mb-8 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
                Especialistas en ART, Accidentes de Tránsito, Sucesiones y Derecho Corporativo.
              </p>
-             <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
-               Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-             </span>
+             
+             <div class="inline-flex items-center gap-4 text-white font-body font-bold uppercase tracking-widest text-[10px] group-hover:text-brand-primary transition-colors">
+               Ingresar a la unidad
+               <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 group-hover:translate-x-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+               </div>
+             </div>
            </div>
         </a>
 
-        <a href="/sports" class="group relative aspect-video md:aspect-[4/5] bg-[#1a1a1a] overflow-hidden flex flex-col justify-end p-8 md:p-12 border border-white/5 hover:border-brand-primary/30 transition-all duration-700">
-           <div class="absolute inset-0 z-0 opacity-30 group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop')] bg-cover bg-center"></div>
-           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent group-hover:via-brand-dark/20 transition-all duration-700"></div>
+        <a href="/sports" class="group relative w-full min-h-[450px] lg:min-h-[650px] overflow-hidden flex flex-col justify-end p-8 md:p-14 border border-white/5 bg-[#0a0a0a]">
+           <div class="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-[1.5s] ease-out grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop')] bg-cover bg-center"></div>
+           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent lg:via-brand-dark/60 lg:group-hover:via-brand-dark/80 transition-all duration-700"></div>
            
-           <div class="relative z-20">
-             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Gestión Deportiva Elite</span>
-             <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">MGEO Sports</h3>
-             <p class="text-gray-400 font-light text-sm max-w-xs mb-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+           <div class="relative z-20 w-full transform transition-all duration-500 lg:translate-y-10 lg:group-hover:translate-y-0">
+             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-3 block">Gestión Deportiva Elite</span>
+             <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">MGEO Sports</h3>
+             
+             <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-sm mb-8 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
                Representación estratégica, intermediación y scouting de futbolistas profesionales.
              </p>
-             <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
-               Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-             </span>
+             
+             <div class="inline-flex items-center gap-4 text-white font-body font-bold uppercase tracking-widest text-[10px] group-hover:text-brand-primary transition-colors">
+               Ingresar a la unidad
+               <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 group-hover:translate-x-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+               </div>
+             </div>
            </div>
         </a>
 
