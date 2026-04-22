@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const articulos = [
+  {
+    titulo: "Indemnización por formación: la guía definitiva",
+    categoria: "Derechos de Formación",
+    contenido: `
+      <p class="mb-4 text-gray-300">Pese a su introducción en 2001 (hace ya más de 20 años), a día de hoy son muchos los clubes y agentes que siguen sin tener claro cómo funciona la indemnización por formación y la contribución de solidaridad, los dos mecanismos previstos por FIFA para fomentar la formación de jóvenes futbolistas.</p>
+      
+      <p class="mb-6 text-gray-300">¿Cuándo se devengan? ¿Cómo se calculan? ¿Cómo se cobran? ¿Cuáles son sus diferencias? Vamos a arrojar luz sobre este asunto. Empezaremos analizando la indemnización por formación (IF), recogida en el art. 20 y el Anexo 4 del Reglamento FIFA sobre el Estatuto y la Transferencia de Jugadores (RETJ).</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">¿Cuándo se devenga la IF?</h4>
+      <p class="mb-4 text-gray-300">Según el art. 20 RETJ, la indemnización por formación se devenga en dos supuestos de hecho claramente diferenciados:</p>
+      <ul class="space-y-2 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Primera inscripción:</strong> cuando el jugador se inscribe por primera vez como profesional.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Subsiguiente transferencia internacional:</strong> cuando ese jugador que ya es profesional es transferido entre clubes de distintas federaciones.</li>
+      </ul>
+      <p class="mb-6 text-brand-primary italic text-sm border-l-2 border-brand-primary pl-4">¡Ojo! Ambas situaciones tienen que ocurrir antes del fin del año natural en el que el jugador cumple 23 años.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">¿Cuándo NO se devenga?</h4>
+      <p class="mb-4 text-gray-300">Existen excepciones clave donde el derecho a cobro desaparece (art. 20, art. 2.2 Anexo 4 y art. 8 Anexo 6 del RETJ):</p>
+      <ul class="space-y-3 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Edad límite:</strong> Si los dos supuestos antes mencionados ocurren a partir de la temporada del 24º cumpleaños del jugador.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Rescisión abusiva:</strong> Si el club anterior rescinde el contrato del jugador sin causa justificada (sin perjuicio del derecho de los clubes anteriores). No se puede premiar la mala praxis del club con una indemnización.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Clubes de 4ª categoría:</strong> Si el destino es un club de Categoría IV, por cuanto son clubes eminentemente aficionados.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Vuelta al amateurismo:</strong> Si el profesional reasume su calidad de aficionado al transferirse. (Nota: Si el jugador reasume su condición de profesional antes de 30 meses, el nuevo club sí deberá pagar la IF - art. 3.2 RETJ).</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Fútbol femenino y Futsal:</strong> En estas disciplinas no aplica la IF.</li>
+      </ul>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Aún hay más…</h4>
+      <p class="text-gray-300">Además de estos seis supuestos, la jurisprudencia determina que la IF tampoco se devenga en otras cuatro ocasiones más, las cuales no vienen recogidas de forma expresa en el RETJ.</p>
+    `
+  },
+  {
+    titulo: "Indemnización por Formación: ¿Cuándo y a quién se paga?",
+    categoria: "Derechos de Formación",
+    contenido: `
+      <p class="mb-6 text-gray-300">Habiendo visto cuándo se devenga (y cuándo no) la Indemnización por Formación (IF) prevista en el RETJ, hoy daremos un paso más: vamos a ver qué años cuentan para el cálculo, quién tiene la obligación de pagar y quiénes son los afortunados beneficiarios.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">¿Cuál es el periodo formativo a efectos de IF?</h4>
+      <p class="mb-4 text-gray-300">Lo primero que debes saber es que, aunque la IF se puede pagar hasta el año del 23º cumpleaños del jugador, <strong>sólo se paga por la formación realizada hasta los 21 años</strong> (o incluso antes, si puede probarse que el jugador ha concluido antes su formación).</p>
+      <p class="mb-6 text-gray-300">Es decir, aunque los supuestos de hecho que la generan ocurran en la temporada del 22º o 23º cumpleaños del jugador, sólo los clubes que han formado al jugador entre los 12 y los 21 tendrán derecho a percibir la IF. Esta es una de las grandes diferencias con el mecanismo de solidaridad, ya que la solidaridad se paga siempre a los clubes que han formado al jugador desde los 12 a los 23 años.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">¿Quién es el obligado al pago?</h4>
+      <p class="mb-6 text-gray-300">El obligado al pago siempre es <strong>el nuevo club del jugador</strong>, no siendo posible que ese pago lo asuma un tercero.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">¿Quién tiene derecho a cobrar la IF?</h4>
+      <p class="mb-4 text-gray-300">Aquí es donde muchos se confunden, por lo que hay que diferenciar dos escenarios:</p>
+      <ul class="space-y-4 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <div><strong>Primera inscripción profesional:</strong> en este caso, el club que inscribe al jugador debe pagar a <em>todos y cada uno</em> de los clubes que lo formaron desde los 12 a los 21 años.</div></li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <div><strong>Subsiguiente transferencia de jugador ya profesional:</strong> aquí el nuevo club solo tiene que pagar la IF al club inmediatamente anterior, el de origen.</div></li>
+      </ul>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Dos reglas de oro finales sobre el pago</h4>
+      <ul class="space-y-4 text-gray-300 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">1.</span> <div><strong>Solo una vez:</strong> Al contrario que la solidaridad (que puede cobrarse tantas veces como el jugador sea transferido), la IF <strong>solo puede ser cobrada una única vez</strong> por cada club formador a lo largo de la carrera del jugador.</div></li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">2.</span> <div><strong>Clubes desaparecidos:</strong> En aquellos casos en que el club beneficiario ya no participe en el fútbol organizado o no exista, la Asociación nacional tendrá derecho a recibir el importe de IF que le hubiera correspondido, debiendo destinarlo a programas de desarrollo del fútbol juvenil.</div></li>
+      </ul>
+    `
+  },
+  {
+    titulo: "Jurisdicción en contratos de representación: El riesgo oculto",
+    categoria: "Cámara de Agentes FIFA",
+    contenido: `
+      <p class="mb-6 text-gray-300">Desde la suspensión de varias disposiciones del Reglamento FIFA sobre Agentes de Fútbol mediante la Circular nº 1873 FIFA, la incertidumbre se ha apoderado del sector. Una de las cuestiones más críticas - y peligrosas - es sin duda alguna la relativa a la jurisdicción.</p>
+
+      <p class="mb-6 text-gray-300">Muchos contratos de representación firmados desde 2023 someten cualquier disputa de forma exclusiva a la Cámara de Agentes de la FIFA. ¿El problema? Hoy, <strong>esa estructura no está operativa</strong> tal y como estaba prevista originalmente.</p>
+
+      <p class="mb-6 text-brand-primary font-bold">Surge entonces la gran pregunta: ¿Qué pasa si tu contrato remite a un órgano cuya competencia está suspendida o no funciona como se diseñó?</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Deficiencias graves en la práctica</h4>
+      <p class="mb-4 text-gray-300">La cláusula de jurisdicción no es un mero formalismo. Estamos viendo cómo circulan contratos con graves deficiencias:</p>
+      <ul class="space-y-2 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> Remiten a la Cámara de Agentes FIFA sin prever ninguna alternativa.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> Combinan el TAS y los tribunales ordinarios en una misma cláusula, generando confusión.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> Someten controversias contractuales puras (un impago, por ejemplo) a órganos puramente disciplinarios.</li>
+      </ul>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Qué debes analizar antes de firmar (o ejecutar)</h4>
+      <ul class="space-y-3 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Compatibilidad:</strong> ¿Es la cláusula de foro compatible con el marco normativo vigente hoy?</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Competencia real:</strong> ¿Tiene el órgano elegido potestad real para resolver ese tipo de disputa concreta?</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Exclusividad vs. paralelismo:</strong> ¿La cláusula es exclusiva o abre la puerta a litigios paralelos?</li>
+      </ul>
+
+      <p class="mb-6 text-gray-300">Recuerda: No es lo mismo someter una disputa al TAS que a la justicia ordinaria, ni tiene nada que ver un procedimiento arbitral con uno disciplinario.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">El riesgo práctico y conclusión</h4>
+      <p class="mb-4 text-gray-300">Si tu cláusula de jurisdicción es defectuosa, en el mejor de los casos puedes perder meses valiosos discutiendo únicamente quién debe juzgar el caso. Y en el peor, te expones a que el órgano en cuestión se declare incompetente y <strong>que tu contrato sea papel mojado</strong> porque no puedas acudir a ningún foro válido a defender tus derechos.</p>
+      <p class="text-gray-300"><strong>Conclusión:</strong> La elección del foro no es "una línea más" del contrato, es la base de todo futuro procedimiento, y lo que puede marcar la diferencia entre que cobres o no. En un contexto donde la Cámara de Agentes de la FIFA está suspendida y el marco jurisdiccional está en transición, <strong>revisar la cláusula de sometimiento ya no es una recomendación, es imprescindible.</strong></p>
+    `
+  },
+  {
+    titulo: "Mercado de pases y agentes: Operar con reglas suspendidas",
+    categoria: "Actualidad Normativa",
+    contenido: `
+      <p class="mb-6 text-gray-300">Desde diciembre de 2023, varias disposiciones clave del Reglamento FIFA sobre Agentes de Fútbol se encuentran temporalmente suspendidas como consecuencia de la Circular FIFA 1873, emitida tras la medida cautelar del Tribunal de Distrito de Dortmund. Esta suspensión no afecta a todo el Reglamento, pero sí a algunos de sus pilares más relevantes, generando incertidumbre práctica.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="bg-white/5 p-6 rounded-sm border border-white/10">
+          <h4 class="text-brand-primary font-bold mb-4 uppercase text-xs tracking-widest">Qué NO se está aplicando actualmente</h4>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-start gap-2"><span class="text-brand-primary">•</span> Los límites a los honorarios a percibir por los agentes.</li>
+            <li class="flex items-start gap-2"><span class="text-brand-primary">•</span> La prohibición de la doble representación.</li>
+            <li class="flex items-start gap-2"><span class="text-brand-primary">•</span> Las reglas sobre quién paga los honorarios y en qué momento.</li>
+            <li class="flex items-start gap-2"><span class="text-brand-primary">•</span> La obligación de canalizar los pagos a través de la Cámara de Compensación.</li>
+            <li class="flex items-start gap-2"><span class="text-brand-primary">•</span> Determinadas obligaciones de publicidad y divulgación contractual.</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white/5 p-6 rounded-sm border border-white/10">
+          <h4 class="text-green-500 font-bold mb-4 uppercase text-xs tracking-widest">Qué SÍ sigue plenamente vigente</h4>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-start gap-2"><span class="text-green-500">•</span> La obligación de contar con la licencia FIFA para ejercer (art. 11.1 RFAF).</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">•</span> El cumplimiento de los requisitos formales del contrato (art. 12.7 RFAF).</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">•</span> Los límites de duración: máximo dos años, sin prórrogas automáticas (art. 12.3 RFAF).</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">•</span> Las reglas sobre representación de menores (art. 13 RFAF).</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">•</span> El derecho del jugador a obtener asesoría jurídica independiente previa a la firma.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mb-4 text-gray-300">Esto significa que, de forma temporal, los agentes pueden seguir pactando la comisión que quieran (sin límite ninguno), así como acordar que la misma sea abonada por el club y no por el jugador, si así lo consideran oportuno, rigiéndose por la normativa nacional aplicable.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary mt-6">La clave práctica: el contrato de representación</h4>
+      <p class="text-gray-300">En este contexto de "pausa normativa", <strong>el contrato de representación se convierte en el principal instrumento de seguridad jurídica para el agente</strong>. Aunque los topes y prohibiciones estén suspendidos, el Reglamento sigue exigiendo que los honorarios, los servicios prestados y las condiciones del mandato estén claramente definidos por escrito. Un contrato impreciso o mal redactado puede generar conflictos ahora… o cuando las disposiciones suspendidas vuelvan a aplicarse.</p>
+    `
+  },
+  {
+    titulo: "¿Puedes transferir un jugador 3 veces en una temporada? La regla 3-2",
+    categoria: "Operativa de Mercado",
+    contenido: `
+      <p class="mb-6 text-gray-300">Como agente, tu principal trabajo es encontrar el destino ideal para tu jugador. Pero no hay nada peor para tu reputación que cerrar un acuerdo, firmar los contratos y descubrir después <strong>que tu cliente no puede debutar</strong>. En el mercado actual, conocer los límites de inscripción es lo que diferencia a un agente proactivo de uno que asume riesgos innecesarios.</p>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">La Fórmula del "3 y 2" (art. 5.4 RETJ)</h4>
+      <p class="mb-4 text-gray-300">Antes de mover a un jugador que ya ha tenido actividad esta temporada, revisa esto:</p>
+      <ul class="space-y-2 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Inscripción:</strong> Tu jugador puede estar INSCRITO en un máximo de <strong>3 clubes</strong> en una misma temporada.</li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <strong>Juego:</strong> Sin embargo, solo puede JUGAR partidos oficiales <strong>en 2 de ellos</strong>.</li>
+      </ul>
+
+      <div class="bg-brand-primary/10 border-l-2 border-brand-primary p-4 mb-6">
+        <p class="text-gray-300 text-sm"><strong>El riesgo práctico:</strong> Si tu jugador ya disputó minutos (aunque sea uno solo) en dos equipos diferentes, el tercer club no podrá alinearlo. Ofrecerlo en estas condiciones es vender un problema, no una solución.</p>
+      </div>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Dónde están las oportunidades (las excepciones)</h4>
+      <p class="mb-4 text-gray-300">No todo está perdido. El Reglamento permite movimientos extra que, si los conoces, te abren mercado donde otros ven puertas cerradas:</p>
+      <ul class="space-y-4 text-gray-300 mb-6 pl-4">
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <div><strong>Mercados cruzados (Ligas de invierno vs. verano):</strong> Si mueves al jugador entre federaciones con calendarios distintos (ej. de la MLS/Sudamérica a Europa), la FIFA permite que sea elegible para jugar en un tercer club en la misma temporada, siempre que se respeten los periodos de inscripción.</div></li>
+        <li class="flex items-start gap-3"><span class="text-brand-primary">•</span> <div><strong>La carta del Futsal:</strong> Si gestionas talento polivalente, recuerda que el RETJ permite estar inscrito simultáneamente en un club de fútbol once y uno de futsal (art. 3.2 Anexo 6 RETJ).</div></li>
+      </ul>
+
+      <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest text-brand-primary">Tu Checklist antes de negociar</h4>
+      <p class="mb-4 text-gray-300">Para cerrar la operación con éxito, no basta con mirar Transfermarkt. Debes verificar:</p>
+      <ul class="space-y-2 text-gray-300 mb-6 pl-4">
+        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg> ¿En cuántos clubes ha estado ya inscrito en la temporada?</li>
+        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg> ¿Ha disputado partidos oficiales en todos ellos?</li>
+        <li class="flex items-center gap-3"><svg class="w-4 h-4 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg> ¿Aplican las excepciones de calendario cruzado?</li>
+      </ul>
+      <p class="text-gray-300">No te confíes y aplica siempre este breve check-list. El éxito de la operación depende de ello.</p>
+    `
+  }
+];
+---
+
+<Layout title="Análisis Legal | MGEO Sports - Especialización FIFA">
+  
+  <section class="relative bg-brand-dark text-white pt-40 pb-20 px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    <div class="container mx-auto max-w-5xl relative z-10">
+      <span class="text-brand-primary font-body font-bold tracking-[0.4em] uppercase text-[10px] mb-6 block">Área de Conocimiento</span>
+      <h1 class="text-5xl md:text-8xl font-heading font-bold mb-6 tracking-tighter">Análisis <span class="italic font-light text-gray-400">Legal.</span></h1>
+      <p class="text-gray-400 font-light text-lg md:text-xl max-w-2xl leading-relaxed border-l border-brand-primary pl-8">
+        Base de datos técnica sobre normativa FIFA, jurisprudencia deportiva y actualización de reglamentos para el fútbol profesional redactados por la Dirección.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-dark px-6 min-h-screen">
+    <div class="container mx-auto max-w-5xl">
+      <div class="space-y-4">
+        {articulos.map((art, index) => (
+          <div class="accordion-item group bg-[#161616] border border-white/5 hover:border-brand-primary/40 transition-colors duration-500 overflow-hidden">
+            
+            <button class="accordion-trigger w-full flex flex-col md:flex-row md:items-center justify-between p-8 text-left focus:outline-none">
+              <div class="flex-1 pr-6">
+                <span class="text-brand-primary text-[10px] font-bold tracking-widest uppercase mb-3 block">{art.categoria}</span>
+                <h3 class="text-2xl md:text-3xl font-heading font-bold text-white group-hover:text-brand-primary transition-colors">{art.titulo}</h3>
+              </div>
+              <div class="mt-6 md:mt-0 flex items-center gap-4">
+                <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest transition-opacity">Consultar Informe</span>
+                <div class="accordion-icon w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-brand-primary transition-transform duration-500 bg-brand-dark shadow-xl shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                </div>
+              </div>
+            </button>
+            
+            <div class="accordion-content grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div class="overflow-hidden">
+                <div class="px-8 pb-12 pt-4 border-t border-white/5 max-w-4xl mx-auto">
+                  <div class="prose prose-invert max-w-none font-body" set:html={art.contenido} />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('.accordion-trigger');
+      
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.closest('.accordion-item');
+          
+          // 1. Le decimos a TypeScript que si 'item' es null, frene acá
+          if (!item) return; 
+
+          const content = item.querySelector('.accordion-content');
+          const icon = item.querySelector('.accordion-icon');
+          
+          // 2. Lo mismo para content e icon
+          if (!content || !icon) return; 
+          
+          // Ahora TypeScript ya sabe que estos elementos existen sí o sí
+          const isOpen = content.classList.contains('grid-rows-[1fr]');
+
+          // Togglear el actual
+          if (!isOpen) {
+            content.classList.remove('grid-rows-[0fr]');
+            content.classList.add('grid-rows-[1fr]');
+            icon.classList.add('rotate-180');
+          } else {
+            content.classList.remove('grid-rows-[1fr]');
+            content.classList.add('grid-rows-[0fr]');
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+    });
+  </script>
+
+</Layout>
+
+<style is:global>
+  strong { color: #fff; font-weight: 600; }
+  em { font-style: normal; color: var(--color-brand-primary); font-weight: 600;}
+</style>
