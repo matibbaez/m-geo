@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const articulos = [
   {
+    id: "formacion",
     titulo: "Indemnización por formación: la guía definitiva",
     categoria: "Derechos de Formación",
     contenido: `
@@ -60,6 +61,7 @@ const articulos = [
     `
   },
   {
+    id: "jurisdiccion",
     titulo: "Jurisdicción en contratos de representación: El riesgo oculto",
     categoria: "Cámara de Agentes FIFA",
     contenido: `
@@ -92,6 +94,7 @@ const articulos = [
     `
   },
   {
+    id: "mercado",
     titulo: "Mercado de pases y agentes: Operar con reglas suspendidas",
     categoria: "Actualidad Normativa",
     contenido: `
@@ -181,7 +184,7 @@ const articulos = [
     <div class="container mx-auto max-w-5xl">
       <div class="space-y-4">
         {articulos.map((art, index) => (
-          <div class="accordion-item group bg-[#161616] border border-white/5 hover:border-brand-primary/40 transition-colors duration-500 overflow-hidden">
+          <div id={art.id} class="accordion-item group bg-[#161616] border border-white/5 hover:border-brand-primary/40 transition-colors duration-500 overflow-hidden scroll-mt-32">
             
             <button class="accordion-trigger w-full flex flex-col md:flex-row md:items-center justify-between p-8 text-left focus:outline-none">
               <div class="flex-1 pr-6">
@@ -214,23 +217,18 @@ const articulos = [
     document.addEventListener('DOMContentLoaded', () => {
       const triggers = document.querySelectorAll('.accordion-trigger');
       
+      // Lógica 1: Abrir y cerrar al hacer clic
       triggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
           const item = trigger.closest('.accordion-item');
-          
-          // 1. Le decimos a TypeScript que si 'item' es null, frene acá
           if (!item) return; 
 
           const content = item.querySelector('.accordion-content');
           const icon = item.querySelector('.accordion-icon');
-          
-          // 2. Lo mismo para content e icon
           if (!content || !icon) return; 
           
-          // Ahora TypeScript ya sabe que estos elementos existen sí o sí
           const isOpen = content.classList.contains('grid-rows-[1fr]');
 
-          // Togglear el actual
           if (!isOpen) {
             content.classList.remove('grid-rows-[0fr]');
             content.classList.add('grid-rows-[1fr]');
@@ -242,6 +240,28 @@ const articulos = [
           }
         });
       });
+
+      // Lógica 2: ABRIR AUTOMÁTICAMENTE SI VIENE DESDE LA OTRA PÁGINA
+      const hash = window.location.hash; // Captura el #algo de la URL
+      if (hash) {
+        const targetItem = document.querySelector(hash);
+        if (targetItem) {
+          const content = targetItem.querySelector('.accordion-content');
+          const icon = targetItem.querySelector('.accordion-icon');
+          
+          if (content && icon) {
+            // Abrimos el acordeón
+            content.classList.remove('grid-rows-[0fr]');
+            content.classList.add('grid-rows-[1fr]');
+            icon.classList.add('rotate-180');
+            
+            // Scrolleamos suavemente hasta ese punto
+            setTimeout(() => {
+              targetItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300); // Un pequeño retraso para asegurar que la página ya cargó bien
+          }
+        }
+      }
     });
   </script>
 
