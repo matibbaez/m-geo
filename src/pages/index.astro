@@ -101,46 +101,40 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
         
-        <a href="/estudio" class="group relative w-full min-h-[450px] lg:min-h-[650px] overflow-hidden flex flex-col justify-end p-8 md:p-14 border border-white/5 bg-[#0a0a0a]">
-           <div class="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-[1.5s] ease-out grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
-           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent lg:via-brand-dark/60 lg:group-hover:via-brand-dark/80 transition-all duration-700"></div>
-           
-           <div class="relative z-20 w-full transform transition-all duration-500 lg:translate-y-10 lg:group-hover:translate-y-0">
-             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-3 block">Áreas Civiles y Corporativas</span>
-             <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">MGEO Abogados</h3>
-             
-             <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-sm mb-8 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
-               Especialistas en ART, Accidentes de Tránsito, Sucesiones y Derecho Corporativo.
-             </p>
-             
-             <div class="inline-flex items-center gap-4 text-white font-body font-bold uppercase tracking-widest text-[10px] group-hover:text-brand-primary transition-colors">
-               Ingresar a la unidad
-               <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 group-hover:translate-x-2">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-               </div>
-             </div>
-           </div>
+        <a href="/estudio" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden border-b md:border-b-0 md:border-r border-white/5 transition-all duration-700 hover:bg-brand-primary/5">
+          <div class="absolute inset-0 bg-brand-dark z-0 opacity-50 group-hover:scale-110 transition-transform duration-1000 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-luminosity opacity-20"></div>
+          
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-32 h-32 md:w-40 md:h-40 mb-6 transition-all duration-500 transform group-hover:-translate-y-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.4)]">
+              <img src="/logo-abogados.png" alt="MGEO Abogados" class="w-full h-full object-contain" />
+            </div>
+            
+            <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors">Estudio Jurídico</h3>
+            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+              Especialistas en ART, Accidentes de Tránsito, Sucesiones y Derecho Corporativo.
+            </p>
+            <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
+              Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+            </span>
+          </div>
         </a>
 
-        <a href="/sports" class="group relative w-full min-h-[450px] lg:min-h-[650px] overflow-hidden flex flex-col justify-end p-8 md:p-14 border border-white/5 bg-[#0a0a0a]">
-           <div class="absolute inset-0 z-0 opacity-40 group-hover:scale-105 transition-transform duration-[1.5s] ease-out grayscale group-hover:grayscale-0 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop')] bg-cover bg-center"></div>
-           <div class="absolute inset-0 z-10 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent lg:via-brand-dark/60 lg:group-hover:via-brand-dark/80 transition-all duration-700"></div>
-           
-           <div class="relative z-20 w-full transform transition-all duration-500 lg:translate-y-10 lg:group-hover:translate-y-0">
-             <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] mb-3 block">Gestión Deportiva Elite</span>
-             <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">MGEO Sports</h3>
-             
-             <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-sm mb-8 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
-               Representación estratégica, intermediación y scouting de futbolistas profesionales.
-             </p>
-             
-             <div class="inline-flex items-center gap-4 text-white font-body font-bold uppercase tracking-widest text-[10px] group-hover:text-brand-primary transition-colors">
-               Ingresar a la unidad
-               <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 group-hover:translate-x-2">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-               </div>
-             </div>
-           </div>
+        <a href="/sports" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden transition-all duration-700 hover:bg-brand-primary/5">
+          <div class="absolute inset-0 bg-brand-dark z-0 opacity-50 group-hover:scale-110 transition-transform duration-1000 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop')] bg-cover bg-center mix-blend-luminosity opacity-20"></div>
+
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-32 h-32 md:w-40 md:h-40 mb-6 transition-all duration-500 transform group-hover:-translate-y-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.4)]">
+              <img src="/logo-sports.png" alt="MGEO Sports" class="w-full h-full object-contain" />
+            </div>
+
+            <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors">MGEO Sports</h3>
+            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+              Representación estratégica, intermediación y scouting de futbolistas profesionales.
+            </p>
+            <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
+              Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+            </span>
+          </div>
         </a>
 
       </div>

@@ -8,13 +8,17 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
     <div class="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
+    <div class="absolute -top-20 -right-20 w-[400px] h-[400px] md:top-1/2 md:-translate-y-1/2 md:right-0 md:w-[80vh] md:h-[80vh] opacity-[0.02] md:opacity-[0.03] pointer-events-none z-0 mix-blend-screen transition-all duration-700">
+      <img src="/logo-abogados.png" alt="" class="w-full h-full object-contain" />
+    </div>
+
     <div class="container mx-auto max-w-5xl relative z-10 w-full">
-      <div class="inline-flex items-center gap-3 mb-8 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-sm">
-        <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-        <span class="text-gray-300 font-body text-[10px] tracking-widest uppercase font-bold">Unidad Legal de MGEO</span>
+      <div class="inline-flex items-center gap-3 mb-8 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-sm max-w-full">
+        <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse shrink-0"></span>
+        <span class="text-gray-300 font-body text-[9px] md:text-[10px] tracking-widest uppercase font-bold whitespace-nowrap overflow-hidden text-ellipsis">Unidad Legal de MGEO</span>
       </div>
 
-      <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tight">
+      <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tighter">
         Seguridad jurídica <br />
         <span class="italic font-light text-gray-400">resultados claros<span class="text-brand-primary">.</span></span>
       </h1>
@@ -36,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="py-24 md:py-32 bg-white px-6 border-b border-gray-100">
     <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <div class="lg:col-span-5">
           <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Nuestra Visión</span>
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark leading-[1.1] mb-8 tracking-tight">
@@ -82,16 +86,16 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto max-w-6xl">
       
       <div class="text-center mb-20">
-        <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Nuestras Áreas</span>
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark tracking-tight">Soluciones Legales Directas.</h2>
-        <p class="text-gray-500 font-light text-lg mt-4 max-w-2xl mx-auto">Conocé cómo funciona cada proceso para que tengas claridad desde el primer contacto.</p>
+        <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Nuestras Áreas</span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark leading-[1.1] mb-8 tracking-tight">Soluciones Legales Directas.</h2>
+        <p class="text-gray-500 font-light text-base md:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">Conocé cómo funciona cada proceso para que tengas claridad desde el primer contacto.</p>
       </div>
 
       <div class="space-y-12">
         
-        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row overflow-hidden">
+        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row overflow-hidden group">
           <div class="xl:w-5/12 bg-brand-dark text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-center">
-            <div class="absolute top-0 left-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px]"></div>
+            <div class="absolute top-0 left-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
             <div class="relative z-10">
               <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">Asesoramiento <br/><span class="text-brand-primary italic">Corporativo</span></h3>
               <p class="text-gray-300 font-light mb-8 leading-relaxed">
@@ -125,9 +129,9 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row-reverse overflow-hidden">
+        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row-reverse overflow-hidden group">
           <div class="xl:w-5/12 bg-[#161616] text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-center">
-            <div class="absolute bottom-0 right-0 w-64 h-64 bg-gray-800/50 rounded-full blur-[80px]"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-gray-800/50 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
             <div class="relative z-10">
               <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">Accidentes Laborales <br/><span class="text-brand-primary italic">(Reclamos ART)</span></h3>
               <p class="text-gray-300 font-light mb-8 leading-relaxed">
@@ -179,9 +183,9 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row overflow-hidden">
+        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row overflow-hidden group">
           <div class="xl:w-5/12 bg-brand-dark text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-center">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px]"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
             <div class="relative z-10">
               <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">Accidentes de <br/><span class="text-brand-primary italic">Tránsito</span></h3>
               <p class="text-gray-300 font-light mb-8 leading-relaxed">
@@ -237,9 +241,9 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row-reverse overflow-hidden">
+        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col xl:flex-row-reverse overflow-hidden group">
           <div class="xl:w-5/12 bg-[#161616] text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-center">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-gray-800/30 rounded-full blur-[80px]"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gray-800/30 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
             <div class="relative z-10">
               <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">Juicios <br/><span class="text-brand-primary italic">Sucesorios</span></h3>
               <p class="text-gray-300 font-light mb-6 leading-relaxed">
@@ -294,9 +298,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-brand-primary/20 flex flex-col xl:flex-row overflow-hidden relative">
-          <div class="absolute top-0 left-0 w-1 h-full bg-brand-primary"></div>
+        <div class="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-brand-primary/20 flex flex-col xl:flex-row overflow-hidden relative group">
+          <div class="absolute top-0 left-0 w-1 h-full bg-brand-primary shadow-[0_0_15px_rgba(120,22,22,0.5)]"></div>
           <div class="xl:w-5/12 bg-brand-dark text-white p-10 md:p-14 relative overflow-hidden flex flex-col justify-center">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-primary/10 rounded-full blur-[80px] group-hover:scale-150 transition-transform duration-1000"></div>
             <div class="relative z-10">
               <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6 leading-tight">Derecho <br/><span class="text-brand-primary italic">Deportivo</span></h3>
               <p class="text-gray-300 font-light mb-6 leading-relaxed">
@@ -362,8 +367,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto max-w-6xl">
       <div class="text-center mb-20 md:mb-28">
         <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Metodología Clara</span>
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark mb-6 tracking-tight">Estructura de Trabajo</h2>
-        <p class="text-gray-500 font-light text-lg max-w-2xl mx-auto">Un proceso jurídico moderno debe brindar certezas. Así transformamos la complejidad legal en soluciones ejecutables paso a paso.</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark leading-[1.1] mb-8 tracking-tight">Estructura de Trabajo</h2>
+        <p class="text-gray-500 font-light text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Un proceso jurídico moderno debe brindar certezas. Así transformamos la complejidad legal en soluciones ejecutables paso a paso.</p>
       </div>
 
       <div class="relative mt-12">
@@ -418,8 +423,11 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section id="contacto" class="py-24 md:py-32 bg-brand-dark text-white px-6 border-t border-white/5">
-    <div class="container mx-auto max-w-6xl">
+  <section id="contacto" class="py-24 md:py-32 bg-brand-dark text-white px-6 border-t border-white/5 relative overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 md:w-[40rem] md:h-[40rem] bg-brand-primary/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+
+    <div class="container mx-auto max-w-6xl relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         
         <div class="lg:col-span-5">
@@ -427,7 +435,7 @@ import Layout from '../layouts/Layout.astro';
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
             Línea Directa
           </span>
-          <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 tracking-tight leading-[1.1] text-white">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] mb-8 tracking-tight text-white">
             Adelantate al <br/> <span class="italic font-light text-gray-400">conflicto.</span>
           </h2>
           <p class="text-gray-400 font-light mb-10 leading-relaxed text-base md:text-lg">
