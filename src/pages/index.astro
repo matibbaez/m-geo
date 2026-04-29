@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="py-24 md:py-40 bg-white px-6">
+  <section class="py-24 md:py-32 bg-white px-6">
     <div class="container mx-auto max-w-6xl">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         
@@ -53,20 +53,16 @@ import Layout from '../layouts/Layout.astro';
         <div class="lg:col-span-7 lg:pl-12">
           <div class="inline-flex items-center gap-4 mb-8">
             <div class="w-10 h-px bg-brand-primary"></div>
-            <span class="text-brand-primary font-body font-bold tracking-[0.4em] uppercase text-[10px]">Liderazgo Estratégico</span>
+            <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Liderazgo Estratégico</span>
           </div>
           
-          <h2 class="text-5xl md:text-7xl font-heading font-bold text-brand-dark mb-10 tracking-tighter leading-[0.95]">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-8 tracking-tight leading-[1.1]">
             Matías Georgetta<br/>
-            <span class="text-gray-300 font-light italic">Fundador & Director.</span>
+            <span class="text-gray-400 font-light italic">Fundador & Director.</span>
           </h2>
           
-          <div class="space-y-8 text-gray-600 font-light text-lg md:text-xl leading-relaxed max-w-2xl">
-            <!-- <p class="font-heading italic text-2xl md:text-3xl text-brand-dark leading-snug">
-              "El derecho y el alto rendimiento exigen lo mismo: estrategia, precisión y resultados."
-            </p> -->
-            
-            <p class="text-base md:text-lg">
+          <div class="space-y-8 text-gray-600 font-light text-base md:text-lg leading-relaxed max-w-2xl">
+            <p>
               MGEO nace para brindar una estructura legal que comprenda tanto la norma como el negocio. Fusionamos la rigurosidad de nuestro <span class="text-brand-dark font-medium">Estudio Jurídico</span> con la visión global de nuestra <span class="text-brand-dark font-medium">Agencia Deportiva</span>, blindando el futuro de nuestros clientes en cada escenario.
             </p>
             
@@ -94,46 +90,50 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
       
       <div class="text-center mb-16 md:mb-24">
-        <span class="text-brand-primary font-body font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 block">Elige tu camino</span>
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 tracking-tight">Unidades Operativas</h2>
+        <span class="text-brand-primary font-body font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">Elige tu camino</span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">Unidades Operativas</h2>
         <div class="w-12 h-[2px] bg-brand-primary mx-auto"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
         
-        <a href="/estudio" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden border-b md:border-b-0 md:border-r border-white/5 transition-all duration-700 hover:bg-brand-primary/5">
-          <div class="absolute inset-0 bg-brand-dark z-0 opacity-50 group-hover:scale-110 transition-transform duration-1000 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-luminosity opacity-20"></div>
+        <a href="/estudio" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden border-b md:border-b-0 md:border-r border-white/5 transition-all duration-700 bg-brand-dark hover:bg-[#111]">
+          <div class="absolute inset-0 z-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-primary/0 rounded-full blur-[100px] group-hover:bg-brand-primary/10 transition-colors duration-700 z-0 pointer-events-none"></div>
           
           <div class="relative z-10 flex flex-col items-center text-center">
-            <div class="w-32 h-32 md:w-40 md:h-40 mb-6 transition-all duration-500 transform group-hover:-translate-y-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.4)]">
+            <div class="w-32 h-32 md:w-40 md:h-40 mb-8 transition-transform duration-700 transform group-hover:-translate-y-3 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.5)]">
               <img src="/logo-abogados.png" alt="MGEO Abogados" class="w-full h-full object-contain" />
             </div>
             
-            <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors">Estudio Jurídico</h3>
-            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+            <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors duration-500">MGEO Abogados</h3>
+            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light transition-colors duration-500 group-hover:text-gray-300 leading-relaxed">
               Especialistas en ART, Accidentes de Tránsito, Sucesiones y Derecho Corporativo.
             </p>
-            <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
+            
+            <div class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] pb-2 border-b border-brand-primary/30 group-hover:border-brand-primary group-hover:gap-6 transition-all duration-500">
               Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-            </span>
+            </div>
           </div>
         </a>
 
-        <a href="/sports" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden transition-all duration-700 hover:bg-brand-primary/5">
-          <div class="absolute inset-0 bg-brand-dark z-0 opacity-50 group-hover:scale-110 transition-transform duration-1000 bg-[url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop')] bg-cover bg-center mix-blend-luminosity opacity-20"></div>
+        <a href="/sports" class="group relative flex flex-col items-center justify-center p-12 overflow-hidden transition-all duration-700 bg-brand-dark hover:bg-[#111]">
+          <div class="absolute inset-0 z-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-primary/0 rounded-full blur-[100px] group-hover:bg-brand-primary/10 transition-colors duration-700 z-0 pointer-events-none"></div>
 
           <div class="relative z-10 flex flex-col items-center text-center">
-            <div class="w-32 h-32 md:w-40 md:h-40 mb-6 transition-all duration-500 transform group-hover:-translate-y-2 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.4)]">
-              <img src="/logo-sports.png" alt="MGEO Sports" class="w-full h-full object-contain" />
+            <div class="w-32 h-32 md:w-40 md:h-40 mb-8 transition-transform duration-700 transform group-hover:-translate-y-3 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_15px_30px_rgba(120,22,22,0.5)]">
+              <img src="/logo-sports.png" alt="MGEO Sports" class="w-full h-full object-contain scale-[1.02]" />
             </div>
 
-            <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors">MGEO Sports</h3>
-            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+            <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6 group-hover:text-brand-primary transition-colors duration-500">MGEO Sports</h3>
+            <p class="text-gray-400 text-sm max-w-xs mx-auto mb-8 font-light transition-colors duration-500 group-hover:text-gray-300 leading-relaxed">
               Representación estratégica, intermediación y scouting de futbolistas profesionales.
             </p>
-            <span class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] border-b border-brand-primary pb-2 group-hover:gap-6 transition-all">
+            
+            <div class="inline-flex items-center gap-3 text-white font-body font-bold uppercase tracking-widest text-[10px] pb-2 border-b border-brand-primary/30 group-hover:border-brand-primary group-hover:gap-6 transition-all duration-500">
               Ingresar <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-            </span>
+            </div>
           </div>
         </a>
 

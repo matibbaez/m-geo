@@ -114,21 +114,17 @@ const roster = [
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-3">
-        {roster.map((jugador) => (
+        {roster.slice(0, 4).map((jugador) => (
           <a href={jugador.link} target="_blank" rel="noopener noreferrer" class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer block rounded-sm border border-white/5 hover:border-brand-primary/40 hover:shadow-[0_10px_30px_-15px_rgba(120,22,22,0.4)] transition-all duration-500">
             <img src={jugador.img} alt={jugador.nombre} class="absolute inset-0 w-full h-full object-cover object-top md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
-            
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-95 md:group-hover:opacity-80 transition-opacity duration-700"></div>
             
             <div class="absolute bottom-0 left-0 w-full p-6 items-start z-20 flex flex-col">
               <span class="bg-brand-primary text-white px-2 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-sm mb-3 inline-block shadow-md">
                 {jugador.tag}
               </span>
-              
               <h3 class="text-2xl font-heading font-bold text-white mb-1 drop-shadow-md truncate w-full">{jugador.nombre}</h3>
-              
               <div class="w-6 h-[2px] bg-white md:w-0 md:group-hover:w-10 group-hover:bg-brand-primary transition-all duration-700 ease-out my-3"></div>
-              
               <div class="flex items-center justify-between w-full">
                 <p class="text-[9px] font-body font-medium text-gray-300 uppercase tracking-[0.15em] truncate pr-2">{jugador.club}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-brand-primary opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-500 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
@@ -138,9 +134,9 @@ const roster = [
         ))}
       </div>
 
-      <div class="md:hidden flex justify-center py-10 mt-6 border-t border-white/10">
-        <a href="https://instagram.com/matias.georgetta" target="_blank" rel="noopener noreferrer" class="bg-brand-primary text-white px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 text-center shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)] flex items-center gap-3 w-full justify-center sm:w-auto">
-          Ver redes oficiales
+      <div class="flex justify-center mt-12 md:mt-16">
+        <a href="/roster" class="bg-brand-primary text-white px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 text-center shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)] flex items-center gap-3 w-full justify-center sm:w-auto">
+          Explorar Roster Oficial Completo
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
         </a>
       </div>
