@@ -473,13 +473,11 @@ import Layout from '../layouts/Layout.astro';
           const icon = this.querySelector('.btn-icon');
           
           if (grid.classList.contains('grid-rows-[0fr]')) {
-            // Expandir
             grid.classList.remove('grid-rows-[0fr]');
             grid.classList.add('grid-rows-[1fr]');
             textSpan.textContent = 'Leer menos';
             icon.classList.add('rotate-180');
           } else {
-            // Contraer
             grid.classList.remove('grid-rows-[1fr]');
             grid.classList.add('grid-rows-[0fr]');
             textSpan.textContent = 'Leer más';
