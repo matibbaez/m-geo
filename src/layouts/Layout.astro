@@ -28,15 +28,12 @@ const { title, description = "M-GEO | Matías Georgetta. Estructura legal corpor
         
         <a href="/" id="logo-link" class="flex items-center gap-3 md:gap-4 group z-50 text-white transition-colors duration-500">
           <div class="flex flex-col justify-center">
-            <span class="text-2xl md:text-3xl font-heading font-bold leading-none tracking-[0.15em] uppercase">
-              M-GEO
-            </span>
-            <span id="logo-accent" class="text-[7.5px] md:text-[9px] font-body font-medium tracking-[0.25em] uppercase mt-1 transition-colors duration-500 opacity-90">
-              MATÍAS GEORGETTA
+            <span class="text-2xl md:text-3xl font-heading font-bold leading-none uppercase">
+              M-GEO<span class="text-brand-primary">.</span>
             </span>
           </div>
         </a>
-        
+
         <div class="hidden lg:flex items-center gap-8">
           <nav>
             <ul id="nav-links" class="flex items-center gap-8 text-[11px] font-body font-semibold tracking-[0.2em] text-white transition-colors duration-500 uppercase">
@@ -99,12 +96,13 @@ const { title, description = "M-GEO | Matías Georgetta. Estructura legal corpor
         <div class="md:col-span-12 lg:col-span-5 pr-0 lg:pr-12">
           
           <div class="flex flex-col justify-center mb-8 inline-flex">
-            <span class="text-2xl md:text-3xl font-heading font-bold text-white leading-none tracking-[0.15em] uppercase">
-              M-GEO<span class="text-brand-primary">.</span>
-            </span>
-            <span class="text-[7.5px] md:text-[9px] font-body font-medium tracking-[0.25em] uppercase mt-1 text-brand-primary opacity-90">
-              MATÍAS GEORGETTA
-            </span>
+            <a href="/" id="logo-link" class="flex items-center gap-3 md:gap-4 group z-50 text-white transition-colors duration-500">
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl md:text-3xl font-heading font-bold leading-none uppercase">
+                  M-GEO<span class="text-brand-primary">.</span>
+                </span>
+              </div>
+            </a>
           </div>
 
           <p class="text-sm font-light leading-loose text-gray-400 mb-8 max-w-sm">
@@ -228,6 +226,9 @@ const { title, description = "M-GEO | Matías Georgetta. Estructura legal corpor
             header?.classList.replace('bg-transparent', 'bg-white/95');
             header?.classList.add('backdrop-blur-xl', 'shadow-sm', 'border-gray-100');
             header?.classList.replace('py-6', 'py-4');
+
+            logoAccent?.classList.remove('text-white/80');
+            logoAccent?.classList.add('text-brand-primary');
             
             logoLink?.classList.replace('text-white', 'text-brand-dark');
             logoSvg?.classList.add('text-brand-primary');
