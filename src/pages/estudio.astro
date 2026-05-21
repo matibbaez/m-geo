@@ -18,21 +18,33 @@ import Layout from '../layouts/Layout.astro';
         <span class="text-gray-300 font-body text-[9px] md:text-[10px] tracking-widest uppercase font-bold whitespace-nowrap overflow-hidden text-ellipsis">Unidad Legal de M-GEO</span>
       </div>
 
-      <h1 class="text-5xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tighter">
+      <h1 class="text-4xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tighter">
         Seguridad jurídica <br />
         <span class="italic font-light text-gray-400">resultados efectivos<span class="text-brand-primary">.</span></span>
       </h1>
 
-      <p class="text-lg md:text-xl font-light text-gray-400 max-w-2xl mb-12 leading-relaxed border-l-2 border-brand-primary pl-6">
+      <p class="text-base md:text-xl font-light text-gray-400 max-w-2xl mb-12 leading-relaxed border-l-2 border-brand-primary pl-6">
         Defendemos tus derechos y protegemos tu patrimonio mediante una estrategia legal precisa y efectiva. Actuamos en conflictos laborales, civiles, comerciales y deportivos.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center gap-6">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap items-center gap-6">
         <a href="#contacto" class="bg-brand-primary text-white px-10 py-5 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 w-full sm:w-auto text-center shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)]">
           Iniciar Consulta
         </a>
+        
         <a href="#especialidades" class="text-white hover:text-brand-primary transition-colors font-body font-semibold text-[11px] uppercase tracking-[0.2em] group flex items-center justify-center gap-4 w-full sm:w-auto py-4">
           Ver Especialidades <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-x-2 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </a>
+
+        <div class="hidden sm:block w-px h-6 bg-white/20"></div>
+
+        <a href="https://instagram.com/mgeo.abogados" target="_blank" class="text-gray-400 hover:text-white transition-colors font-body font-semibold text-[11px] uppercase tracking-[0.2em] group flex items-center justify-center gap-3 w-full sm:w-auto py-4" title="Instagram M-GEO Abogados">
+          <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-primary transition-colors" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+          </svg>
+          @mgeo.abogados
         </a>
       </div>
     </div>
@@ -51,12 +63,14 @@ import Layout from '../layouts/Layout.astro';
             En derecho, no solo se trata de conocer la ley, sino de aplicarla estratégicamente. Brindamos asesoramiento a particulares y empresas en defensa de sus intereses.
           </p>
           
-          <div class="flex items-center gap-6 pt-6 border-t border-gray-100">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6 border-t border-gray-100">
             <div class="flex items-center gap-4">
               <span class="text-3xl font-heading font-bold text-brand-dark">100%</span>
               <span class="text-[10px] font-body font-bold uppercase tracking-widest text-gray-500 leading-tight">Transparencia<br/>procesal</span>
             </div>
-            <div class="w-px h-10 bg-gray-200"></div>
+            
+            <div class="w-12 h-px sm:w-px sm:h-10 bg-gray-200"></div>
+            
             <div class="flex items-center gap-4">
               <span class="text-3xl font-heading font-bold text-brand-primary">24h</span>
               <span class="text-[10px] font-body font-bold uppercase tracking-widest text-gray-500 leading-tight">Análisis y<br/>Respuesta</span>
@@ -428,13 +442,13 @@ import Layout from '../layouts/Layout.astro';
           </p>
           
           <div class="space-y-6">
-            <a href="mailto:estudio@mgeo.com.ar" class="flex items-center gap-5 group">
+            <a href="mailto:contacto@m-geo.ar" class="flex items-center gap-5 group">
               <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white group-hover:bg-brand-primary group-hover:border-brand-primary transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
               </div>
               <div class="flex flex-col">
                 <span class="font-body text-[10px] tracking-[0.2em] uppercase text-gray-500 mb-1">Correo Electrónico (Opción alternativa)</span>
-                <span class="font-medium text-white group-hover:text-brand-primary transition-colors text-sm">estudio@mgeo.com.ar</span>
+                <span class="font-medium text-white group-hover:text-brand-primary transition-colors text-sm">contacto@m-geo.ar</span>
               </div>
             </a>
           </div>
@@ -510,7 +524,7 @@ import Layout from '../layouts/Layout.astro';
           const mensaje = mensajeInput.value;
 
           // ⚠️ IMPORTANTE: ACÁ PONÉS EL NÚMERO DE TELÉFONO DEL ESTUDIO ⚠️
-          const numeroWhatsApp = "5491100000000"; 
+          const numeroWhatsApp = "5491139083310"; 
 
           // Armamos la estructura del mensaje
           const textoBase = 
