@@ -4,22 +4,42 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = "M-GEO | Matías Georgetta. Estructura legal corporativa y representación deportiva profesional." } = Astro.props;
+const { 
+  title, 
+  description = "M-GEO | Matías Georgetta. Estructura legal corporativa y representación deportiva profesional.",
+  ogImage = "/matias-geo.png"
+} = Astro.props;
+
+// Usamos Astro.url como base en lugar de Astro.site para que nunca tire error
+const canonicalURL = new URL(Astro.url.pathname, Astro.url);
+const socialImageURL = new URL(ogImage, Astro.url);
 ---
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/logo-abogados.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>{title}</title>
+
+    <meta name="description" content={description} />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} /> <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} /> </head>
+
   </head>
   <body class="antialiased flex flex-col min-h-screen selection:bg-brand-primary selection:text-white bg-brand-white">
     

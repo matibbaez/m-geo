@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Estudio Jurídico M-GEO | Especialistas en ART, Tránsito, Civil y Corporativo">
+<Layout 
+  title="M-GEO Abogados | Estudio Jurídico | ART, Tránsito y Derecho Civil"
+  description="Seguridad jurídica. Resultados efectivos. Especialistas en reclamos de ART, accidentes de tránsito, derecho civil y corporativo."
+  ogImage="/matias-geo.png"
+>
   
   <section class="relative bg-brand-dark text-white min-h-[90vh] md:min-h-screen flex items-center px-6 md:px-12 overflow-hidden pt-32 pb-20">
     <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
@@ -19,8 +23,8 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <h1 class="text-4xl md:text-7xl lg:text-[6.5rem] font-heading font-bold leading-[1.05] mb-8 tracking-tighter">
-        Seguridad jurídica <br />
-        <span class="italic font-light text-gray-400">resultados efectivos<span class="text-brand-primary">.</span></span>
+        Seguridad jurídica. <br />
+        <span class="text-3xl md:text-6xl lg:text-[5.5rem] italic font-light text-gray-400">Resultados efectivos<span class="text-brand-primary">.</span></span>
       </h1>
 
       <p class="text-base md:text-xl font-light text-gray-400 max-w-2xl mb-12 leading-relaxed border-l-2 border-brand-primary pl-6">
@@ -528,19 +532,19 @@ import Layout from '../layouts/Layout.astro';
 
           // Armamos la estructura del mensaje
           const textoBase = 
-`Hola Estudio MGEO, me contacto desde la web para realizar una consulta.
+            `Hola Estudio MGEO, me contacto desde la web para realizar una consulta.
 
-*Datos del cliente:*
-👤 Nombre/Empresa: ${nombre}
-📞 Contacto alternativo: ${contacto}
+            *Datos del cliente:*
+            👤 Nombre/Empresa: ${nombre}
+            📞 Contacto alternativo: ${contacto}
 
-*Área legal de interés:*
-⚖️ ${area}
+            *Área legal de interés:*
+            ⚖️ ${area}
 
-*Detalle de la consulta:*
-${mensaje}
+            *Detalle de la consulta:*
+            ${mensaje}
 
-Aguardo sus comentarios. ¡Gracias!`;
+            Aguardo sus comentarios. ¡Gracias!`;
 
           // Codificamos el texto para la URL
           const textoCodificado = encodeURIComponent(textoBase);
