@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Dejanos tu Reseña | M-GEO" 
+  description="Valoramos tu opinión. Compartí tu experiencia trabajando con el equipo de M-GEO."
+>
+  
+  <section class="relative min-h-screen flex items-center justify-center py-24 bg-brand-dark text-white overflow-hidden px-6">
+    <!-- Efectos de fondo premium -->
+    <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    <div class="absolute top-0 right-0 w-[30rem] h-[30rem] bg-brand-primary/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+    <div class="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+    <div class="container mx-auto max-w-xl relative z-10 w-full mt-16 md:mt-0">
+      
+      <!-- Encabezado -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center gap-3 mb-4 justify-center">
+          <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+          <span class="text-gray-300 font-body text-[9px] uppercase tracking-widest font-bold">Feedback de Clientes</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 tracking-tighter">Tu <span class="italic font-light text-gray-400">experiencia</span>.</h1>
+        <p class="text-gray-400 font-light text-sm md:text-base px-4">Tu opinión es fundamental para seguir elevando nuestro estándar de excelencia institucional y deportiva.</p>
+      </div>
+
+      <!-- Formulario -->
+      <form id="form-feedback" class="bg-[#111] border border-white/5 p-8 md:p-10 rounded-sm flex flex-col gap-6 shadow-2xl backdrop-blur-sm relative">
+        
+        <!-- Input: Nombre -->
+        <div>
+          <label for="nombre" class="block text-[10px] uppercase tracking-[0.2em] font-body text-gray-400 mb-2 font-semibold">Tu Nombre o Institución</label>
+          <input type="text" id="nombre" name="nombre" required 
+            class="w-full bg-brand-dark border border-white/10 text-white px-5 py-4 outline-none focus:border-brand-primary transition-colors duration-300 text-sm font-light" 
+            placeholder="Ej: Juan Pérez / Club Atlético X" />
+        </div>
+
+        <!-- Input: Estrellas -->
+        <div>
+          <label class="block text-[10px] uppercase tracking-[0.2em] font-body text-gray-400 mb-2 font-semibold">Calificación del Servicio</label>
+          <div class="flex gap-3" id="star-rating">
+            <svg class="w-8 h-8 text-brand-primary cursor-pointer hover:scale-110 transition-all duration-300 star-icon drop-shadow-lg" data-value="1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-8 h-8 text-brand-primary cursor-pointer hover:scale-110 transition-all duration-300 star-icon drop-shadow-lg" data-value="2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-8 h-8 text-brand-primary cursor-pointer hover:scale-110 transition-all duration-300 star-icon drop-shadow-lg" data-value="3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-8 h-8 text-brand-primary cursor-pointer hover:scale-110 transition-all duration-300 star-icon drop-shadow-lg" data-value="4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg class="w-8 h-8 text-brand-primary cursor-pointer hover:scale-110 transition-all duration-300 star-icon drop-shadow-lg" data-value="5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <input type="hidden" name="rating" id="rating-value" value="5" required>
+        </div>
+
+        <!-- Input: Comentario -->
+        <div>
+          <label for="comentario" class="block text-[10px] uppercase tracking-[0.2em] font-body text-gray-400 mb-2 font-semibold">Tu Reseña</label>
+          <textarea id="comentario" name="comentario" rows="5" required 
+            class="w-full bg-brand-dark border border-white/10 text-white px-5 py-4 outline-none focus:border-brand-primary transition-colors duration-300 text-sm font-light resize-none" 
+            placeholder="Compartí brevemente tu experiencia con la agencia o el estudio jurídico..."></textarea>
+        </div>
+
+        <!-- Botón -->
+        <button type="submit" id="btn-submit" class="bg-brand-primary text-white font-body font-bold uppercase tracking-[0.2em] text-[11px] py-5 hover:bg-white hover:text-brand-dark transition-all duration-500 mt-2 shadow-[0_10px_30px_-10px_rgba(120,22,22,0.5)] flex justify-center items-center gap-3 group">
+          <span>Enviar Reseña Institucional</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.star-icon');
+    const ratingInput = document.getElementById('rating-value') as HTMLInputElement;
+    const form = document.getElementById('form-feedback') as HTMLFormElement;
+    const btnSubmit = document.getElementById('btn-submit') as HTMLButtonElement;
+
+    // Hover visual y Selección de estrellas
+    stars.forEach(star => {
+      star.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const value = parseInt(target.getAttribute('data-value') || '5');
+        
+        if(ratingInput) ratingInput.value = value.toString();
+        
+        stars.forEach(s => {
+          const starValue = parseInt(s.getAttribute('data-value') || '0');
+          if (starValue <= value) {
+            s.classList.remove('text-gray-600');
+            s.classList.add('text-brand-primary');
+          } else {
+            s.classList.remove('text-brand-primary');
+            s.classList.add('text-gray-600');
+          }
+        });
+      });
+    });
+
+    if(form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        
+        // Efecto de carga en el botón
+        const originalText = btnSubmit.innerHTML;
+        btnSubmit.innerHTML = '<span class="animate-pulse">Procesando...</span>';
+        btnSubmit.disabled = true;
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        // Simulación de envío a base de datos (Acá después metemos Supabase)
+        setTimeout(() => {
+          console.log('--- NUEVA RESEÑA PARA SUPABASE ---', data);
+          alert('¡Gracias ' + data.nombre + '! Tu reseña de ' + data.rating + ' estrellas fue recibida.');
+          
+          form.reset();
+          if(ratingInput) ratingInput.value = "5";
+          stars.forEach(s => {
+            s.classList.remove('text-gray-600');
+            s.classList.add('text-brand-primary');
+          });
+
+          btnSubmit.innerHTML = originalText;
+          btnSubmit.disabled = false;
+        }, 1500);
+
+      });
+    }
+  });
+</script>

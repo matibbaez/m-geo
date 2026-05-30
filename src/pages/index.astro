@@ -1,5 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const resenasMock = [
+  {
+    nombre: "Mauro C.",
+    texto: "El Dr cubrió con creces mis expectativas, encontro y resolvio un importante problemas familiar. Lo recomende con exito en varias demandas laborares.",
+    estrellas: 5,
+    unidad: "M-GEO Abogados"
+  },
+  {
+    nombre: "Norberto B.",
+    texto: "Buena atencion, especialistas en sucesiones y temas legales. Me resolvieron un tema complicado.",
+    estrellas: 5,
+    unidad: "M-GEO Abogados"
+  },
+  {
+    nombre: "Trinidad B.",
+    texto: "Excelente profesional.",
+    estrellas: 5,
+    unidad: "M-GEO Abogados"
+  },
+  {
+    nombre: "Lucas A.",
+    texto: "Excelente estudio jurídico, muy profesionales, super confiable, 100% para recomendar.",
+    estrellas: 5,
+    unidad: "M-GEO Abogados"
+  },
+  {
+    nombre: "Analía B.",
+    texto: "Excelente atención del abogado.",
+    estrellas: 5,
+    unidad: "M-GEO Abogados"
+  }
+];
 ---
 
 <Layout title="M-GEO | Matías Georgetta - Excelencia Legal y Gestión Deportiva">
@@ -157,5 +190,129 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>  
+
+  <!-- SECCIÓN PRUEBA SOCIAL / RESEÑAS SCROLLABLE -->
+  <section class="py-20 md:py-32 bg-[#161616] text-white border-t border-white/5 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-160 h-160 bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+    <div class="container mx-auto max-w-7xl px-6 relative z-10">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-16">
+        <div class="text-center md:text-left">
+          <div class="inline-flex items-center gap-3 mb-4 justify-center md:justify-start w-full md:w-auto">
+            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+            <span class="text-gray-300 font-body text-[9px] uppercase tracking-widest font-bold">Prueba Social</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tighter">
+            Respaldados por la <br class="hidden md:block"/>
+            <span class="italic font-light text-gray-400">confianza<span class="text-brand-primary">.</span></span>
+          </h2>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-4 pb-2">
+          <button id="btn-prev-resenas" aria-label="Anterior" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 text-gray-400 hover:text-white group cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transform group-hover:-translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+          </button>
+          <button id="btn-next-resenas" aria-label="Siguiente" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 text-gray-400 hover:text-white group cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="slider-resenas" class="flex overflow-x-auto items-stretch gap-6 pb-12 pt-4 snap-x snap-mandatory hide-scrollbar cursor-grab active:cursor-grabbing">
+        {resenasMock.map((resena) => (
+          <!-- Eliminamos h-full para que items-stretch haga que todas midan lo mismo -->
+          <div class="w-[85%] md:w-[380px] lg:w-[420px] snap-start shrink-0 bg-[#111] border border-white/5 p-8 md:p-10 rounded-sm hover:border-brand-primary/30 transition-colors duration-500 flex flex-col relative group shadow-lg select-none">
+            
+            <div class="flex gap-1 mb-6">
+              {Array.from({ length: resena.estrellas }).map(() => (
+                <svg class="w-4 h-4 text-brand-primary pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              ))}
+            </div>
+
+            <!-- El 'grow' acá empuja el bloque del nombre hacia el fondo de la tarjeta -->
+            <p class="text-gray-300 font-light text-base md:text-lg leading-relaxed mb-10 grow whitespace-normal pointer-events-none">
+              "{resena.texto}"
+            </p>
+
+            <div class="border-t border-white/10 pt-5 mt-auto flex justify-between items-end gap-4 pointer-events-none">
+              <div>
+                <h4 class="text-white font-heading font-bold text-lg">{resena.nombre}</h4>
+              </div>
+              <span class="text-[8px] uppercase tracking-[0.2em] text-brand-primary font-body font-bold bg-brand-primary/10 px-3 py-1.5 rounded-sm whitespace-nowrap">
+                {resena.unidad}
+              </span>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('slider-resenas');
+      const btnPrev = document.getElementById('btn-prev-resenas');
+      const btnNext = document.getElementById('btn-next-resenas');
+
+      if (!slider) return;
+
+      if (btnPrev && btnNext) {
+        const scrollAmount = 400;
+
+        btnNext.addEventListener('click', () => {
+          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+          slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        slider.classList.remove('snap-mandatory', 'snap-x');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+        slider.classList.add('snap-mandatory', 'snap-x');
+      });
+
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+        slider.classList.add('snap-mandatory', 'snap-x');
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; 
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    });
+  </script>
 
 </Layout>
