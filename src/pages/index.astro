@@ -1,38 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { createClient } from '@supabase/supabase-js';
 
-const resenasMock = [
-  {
-    nombre: "Mauro C.",
-    texto: "El Dr cubrió con creces mis expectativas, encontro y resolvio un importante problemas familiar. Lo recomende con exito en varias demandas laborares.",
-    estrellas: 5,
-    unidad: "M-GEO Abogados"
-  },
-  {
-    nombre: "Norberto B.",
-    texto: "Buena atencion, especialistas en sucesiones y temas legales. Me resolvieron un tema complicado.",
-    estrellas: 5,
-    unidad: "M-GEO Abogados"
-  },
-  {
-    nombre: "Trinidad B.",
-    texto: "Excelente profesional.",
-    estrellas: 5,
-    unidad: "M-GEO Abogados"
-  },
-  {
-    nombre: "Lucas A.",
-    texto: "Excelente estudio jurídico, muy profesionales, super confiable, 100% para recomendar.",
-    estrellas: 5,
-    unidad: "M-GEO Abogados"
-  },
-  {
-    nombre: "Analía B.",
-    texto: "Excelente atención del abogado.",
-    estrellas: 5,
-    unidad: "M-GEO Abogados"
-  }
-];
+// Conexión a Supabase desde el servidor (Astro Build)
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Traemos solo las reseñas que Mati marcó como "publicada = true"
+const { data: resenasDB, error } = await supabase
+  .from('resenas')
+  .select('*')
+  .eq('publicada', true)
+  .order('created_at', { ascending: false });
+
+// Usamos las de la base de datos, o un array vacío si no hay ninguna todavía
+const resenas = resenasDB || [];
 ---
 
 <Layout title="M-GEO | Matías Georgetta - Excelencia Legal y Gestión Deportiva">
@@ -220,8 +203,8 @@ const resenasMock = [
       </div>
 
       <div id="slider-resenas" class="flex overflow-x-auto items-stretch gap-6 pb-12 pt-4 snap-x snap-mandatory hide-scrollbar cursor-grab active:cursor-grabbing">
-        {resenasMock.map((resena) => (
-          <div class="w-[85%] md:w-[380px] lg:w-[420px] snap-start shrink-0 bg-black/20 backdrop-blur-sm border border-white/10 p-8 md:p-10 rounded-sm hover:border-brand-primary/40 transition-colors duration-500 flex flex-col relative group shadow-2xl select-none">
+        {resenas.map((resena) => (
+          <div class="w-[85%] md:w-[380px] lg:w-[420px] snap-start shrink-0 bg-[#0a0a0a] border border-white/5 p-8 md:p-10 rounded-sm hover:border-brand-primary/40 transition-colors duration-500 flex flex-col relative group shadow-2xl select-none">
             
             <div class="flex gap-1 mb-6">
               {Array.from({ length: resena.estrellas }).map(() => (
