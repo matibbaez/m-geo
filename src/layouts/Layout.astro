@@ -115,6 +115,7 @@ const socialImageURL = new URL(ogImage, Astro.url);
       
       <div class="container mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-12 mb-20 relative z-10">
         
+        <!-- Columna 1: Branding -->
         <div class="md:col-span-12 lg:col-span-5 pr-0 lg:pr-12">
           <div class="flex flex-col justify-center mb-8 inline-flex">
             <a href="/" id="logo-link" class="flex items-center gap-3 md:gap-4 group z-50 text-white transition-colors duration-500">
@@ -131,14 +132,34 @@ const socialImageURL = new URL(ogImage, Astro.url);
           </p>
         </div>
         
-        <div class="md:col-span-6 lg:col-span-3">
-          <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Unidades</span>
-          <ul class="space-y-4 text-sm font-light text-gray-400">
-            <li><a href="/estudio" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> M-GEO Abogados</a></li>
-            <li><a href="/sports" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> M-GEO Sports</a></li>
-          </ul>
+        <!-- Columna 2: Unidades y Feedback -->
+        <div class="md:col-span-6 lg:col-span-3 flex flex-col justify-between">
+          
+          <!-- Bloque Unidades -->
+          <div>
+            <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-6 flex items-center gap-3">
+              <span class="w-3 h-px bg-brand-primary"></span> Unidades
+            </span>
+            <ul class="space-y-4 text-sm font-light text-gray-400">
+              <li><a href="/estudio" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> M-GEO Abogados</a></li>
+              <li><a href="/sports" class="hover:text-brand-primary transition-colors flex items-center gap-3 group"><span class="w-1.5 h-1.5 rounded-full bg-gray-700 group-hover:bg-brand-primary transition-colors"></span> M-GEO Sports</a></li>
+            </ul>
+          </div>
+
+          <!-- Diseño Premium para Feedback -->
+          <div class="mt-12 pt-8 border-t border-white/5">
+            <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-4 block">Feedback</span>
+            <a href="/feedback" class="inline-flex items-center gap-3 text-xs font-light text-gray-400 hover:text-brand-primary transition-colors duration-300 group">
+              Dejar reseña
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </a>
+          </div>
+
         </div>
         
+        <!-- Columna 3: Contacto -->
         <div class="md:col-span-6 lg:col-span-4">
           <span class="text-white uppercase tracking-[0.2em] text-[10px] font-bold mb-8 flex items-center gap-3"><span class="w-3 h-px bg-brand-primary"></span> Contacto Central</span>
           <ul class="space-y-4 text-sm font-light text-gray-400 mb-8">
@@ -157,9 +178,10 @@ const socialImageURL = new URL(ogImage, Astro.url);
         </div>
       </div>
       
+      <!-- Barra Inferior -->
       <div class="container mx-auto px-6 md:px-10 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] uppercase tracking-[0.2em] font-body text-gray-500 font-medium">
         <p>© {new Date().getFullYear()} M-GEO. Todos los derechos reservados.</p>
-        <div class="flex items-center gap-2"><span>Diseño y Arquitectura por</span><a href="#" class="text-brand-primary hover:text-white transition-colors font-bold">VisionPath</a></div>
+        <div class="flex items-center gap-2"><span>Diseño y Arquitectura por</span><a href="https://www.wearevisionpath.com/es" class="text-brand-primary hover:text-white transition-colors font-bold">VisionPath</a></div>
       </div>
     </footer>
 
