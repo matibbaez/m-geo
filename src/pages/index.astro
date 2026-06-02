@@ -1,4 +1,7 @@
 ---
+// 1. LA MAGIA: Le decimos a Astro que renderice esta página en cada visita
+export const prerender = false;
+
 import Layout from '../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
 
@@ -16,6 +19,16 @@ const { data: resenasDB, error } = await supabase
 
 // Usamos las de la base de datos, o un array vacío si no hay ninguna todavía
 const resenas = resenasDB || [];
+
+// NUEVO: Función para capitalizar nombres (ej: "juan pérez" -> "Juan Pérez")
+const formatearNombre = (texto: string) => {
+  if (!texto) return '';
+  return texto
+    .toLowerCase()
+    .split(' ')
+    .map((palabra: string) => palabra.charAt(0).toUpperCase() + palabra.slice(1))
+    .join(' ');
+};
 ---
 
 <Layout title="M-GEO | Matías Georgetta - Excelencia Legal y Gestión Deportiva">
@@ -218,7 +231,7 @@ const resenas = resenasDB || [];
 
             <div class="border-t border-white/10 pt-5 mt-auto flex justify-between items-end gap-4 pointer-events-none">
               <div>
-                <h4 class="text-white font-heading font-bold text-lg">{resena.nombre}</h4>
+                <h4 class="text-white font-heading font-bold text-lg">{formatearNombre(resena.nombre)}</h4>
               </div>
               <span class="text-[8px] uppercase tracking-[0.2em] text-brand-primary font-body font-bold bg-brand-primary/10 px-3 py-1.5 rounded-sm whitespace-nowrap">
                 {resena.unidad}
