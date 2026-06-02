@@ -4,11 +4,18 @@ export const prerender = false;
 
 import Layout from '../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
+import ws from 'ws'; // IMPORTANTE: Importamos esto para que Vercel no explote
 
 // Conexión a Supabase desde el servidor (Astro Build)
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Inicializamos con el transporte de 'ws' para evitar el error de Node.js
+const supabase = createClient(supabaseUrl, supabaseKey, {
+  realtime: {
+    transport: ws
+  }
+});
 
 // Traemos solo las reseñas que Mati marcó como "publicada = true"
 const { data: resenasDB, error } = await supabase
@@ -20,7 +27,7 @@ const { data: resenasDB, error } = await supabase
 // Usamos las de la base de datos, o un array vacío si no hay ninguna todavía
 const resenas = resenasDB || [];
 
-// NUEVO: Función para capitalizar nombres (ej: "juan pérez" -> "Juan Pérez")
+// Función para capitalizar nombres
 const formatearNombre = (texto: string) => {
   if (!texto) return '';
   return texto

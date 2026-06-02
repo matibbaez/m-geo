@@ -17,6 +17,10 @@
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
     "lenis": "^1.3.17",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1"
   }
 }
