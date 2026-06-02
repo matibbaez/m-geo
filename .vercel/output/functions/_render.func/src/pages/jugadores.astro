@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const roster = [
+  // JUGADORES EXISTENTES
+  { img: "/jugador1-lucero.jpeg", nombre: "Matías Lucero", tag: "Volante", club: "Arsenal FC", link: "https://www.instagram.com/p/DXh8bBMkcbp/?igsh=bG5pbzN2czY1M28w" },
+  { img: "/jugador2-bermejo.jpeg", nombre: "Mauricio Bermejo", tag: "Volante", club: "Ituzaingó", link: "https://www.instagram.com/p/DS3HvSVj05a/?igsh=b2hpNmVmbmw3MDY2" },
+  // { img: "/elian-acosta.jpeg", nombre: "Elián Acosta", tag: "Defensor", club: "Club Lanús", link: "https://www.instagram.com/p/DXuEzaHjU-W/?igsh=bTZodGR1NnMydW80" }, 
+  { img: "/jugador3-otero.jpeg", nombre: "Federico Otero", tag: "Volante", club: "Dock Sud", link: "https://www.instagram.com/p/DWt67IJES3Y/?igsh=ejlmMGF0a2drancz" },
+  { img: "/jugador4-moran.jpeg", nombre: "Jonatan Morán", tag: "Centro Delantero", club: "Real Pilar FC", link: "https://www.instagram.com/p/DVOhS3aDWaS/?igsh=ODN4Nmh3eXQyb3Y%3D" },
+  { img: "/jugador5-ramirez.jpeg", nombre: "Leonel Ramírez", tag: "Defensor Central", club: "Deportivo Morón", link: "https://www.instagram.com/p/DRVrtgPjdh9/?igsh=MWR0OTlqYTFnYmVp" },
+  { img: "/jugador6-abbruzzese.jpeg", nombre: "Matías Abbruzzese", tag: "Volante", club: "Midland", link: "https://www.instagram.com/p/DO4tCM_jaHq/?img_index=1&igsh=N3FpcmhjMTlyeW1v" },
+  { img: "/jugador8-benitez.jpeg", nombre: "Kevin Benítez", tag: "Volante", club: "Arsenal FC", link: "https://www.instagram.com/p/DWkcY_4DcKY/?igsh=MWoxMWdvZ2E4OHYzeg%3D%3D" },
+  { img: "/jugador9-maldonado.jpeg", nombre: "Fernando Maldonado", tag: "Delantero", club: "Argentino de Merlo", link: "https://www.instagram.com/p/DNyBCc92oe9/?igsh=dHJtM2h0ZXFvaHNp" },
+  { img: "/jugador10-badur.jpeg", nombre: "Maximiliano Badur", tag: "Extremo", club: "Deportivo Morón", link: "https://www.instagram.com/p/DXk6BBZDaJA/?igsh=MXRiODl0bXh3cG9ocQ%3D%3D" },
+  { img: "/jugador11-ledesma.jpeg", nombre: "Julián Ledesma", tag: "Delantero", club: "Arsenal FC", link: "https://www.instagram.com/p/DVwJjH0kRy6/?igsh=MWUzNXoyNnNueW1ldw%3D%3D" },
+  
+  // NUEVOS JUGADORES (A completar info)
+  { img: "/jugador12-vocos.jpeg", nombre: "Román Vocos", tag: "Volante Mixto", club: "Almirante Brown", link: "https://www.instagram.com/p/DT3KpflEfHe/?igsh=Z3V3djhzbWRnOTIw" },
+  { img: "/jugador13-chamorro.jpeg", nombre: "Tomás Chamorro", tag: "Volante", club: "Sportivo Dock Sud", link: "https://www.instagram.com/p/DXhpnhQkb6Q/?igsh=MTZ0czR0MTVxbG1wbg%3D%3D" },
+  { img: "/jugador14-sanchez.jpeg", nombre: "Santiago Sanchez", tag: "Arquero", club: "Real Pilar FC", link: "https://www.instagram.com/p/DTf7cPPkbN-/?igsh=MTRrNmkxOHc2cWp6cw%3D%3D" },
+  { img: "/jugador15-alfonso.jpeg", nombre: "Sebastián Alfonso", tag: "Volante", club: "Argentino de Quilmes", link: "https://www.instagram.com/p/DUY8SJ_D9uf/?igsh=MThhdHBhcGZwcDgzcg%3D%3D" },
+  { img: "/jugador16-bais.jpeg", nombre: "Tomas Bais", tag: "Arquero", club: "Club Lanús", link: "https://www.instagram.com/p/DQsYa3RDXJk/?igsh=ajBiNzV0NzNyZTB0" },
+  { img: "/jugador17-mendez.jpeg", nombre: "Federico Méndez", tag: "Delantero", club: "Arsenal FC", link: "https://www.instagram.com/p/DL8RWOQSe2i/?igsh=OXUyeWZ1ZjY1MTJx" },
+  { img: "/jugador18-villagra.jpeg", nombre: "Leandro Villagra", tag: "Defensor", club: "Club El Porvenir", link: "https://www.instagram.com/p/DRfjSC7kWIi/?igsh=ZHZjZWI3Y25qNzY%3D" },
+  { img: "/jugador19-robles.jpeg", nombre: "Braian Robles", tag: "Defensor", club: "Asociación Deportiva Berazategui", link: "https://www.instagram.com/p/DYqiob9jaLP/?igsh=MWYwa2VzaHU4cGFsdw%3D%3D" },
+  { img: "/jugador20-lopez.jpeg", nombre: "Thiago López", tag: "Defensor / Extremo", club: "Deportivo Morón", link: "https://www.instagram.com/p/DYm0SPYkVJ1/?igsh=MTc3NXJjbHpxaDk2OQ%3D%3D" },
+  { img: "/jugador21-lorenzi.jpeg", nombre: "Luis Lorenzi", tag: "Defensor", club: "Sacachispas Fútbol Club", link: "https://www.instagram.com/p/DVgha33DQu5/?img_index=1&igsh=MTE1dzl3djQ4bnplaA%3D%3D" },
+  { img: "/jugador27-jorquera.jpeg", nombre: "Nicolás Jorquera", tag: "Delantero", club: "Club Atlético Unión de Villa Krause", link: "https://www.instagram.com/p/DQ7IYk0kTk9/?igsh=MTV4YmZmamd3NXZi" },
+  { img: "/jugador22-alfonzo.jpeg", nombre: "Adrián Alfonzo", tag: "Defensor", club: "Asociación Deportiva Berazategui", link: "https://www.instagram.com/p/DVcQeKADbtS/?igsh=MTZhYWtnYWF1Y3NpZA%3D%3D" },
+  { img: "/jugador23-amembi.jpeg", nombre: "Ramiro Amembi", tag: "Volante Ofensivo", club: "Club Sportivo Italiano", link: "https://www.instagram.com/p/DWsDjanjY4z/?igsh=a3R6ZWQ4Mnl5ZHcx" },
+  { img: "/jugador24-maciel.jpeg", nombre: "Agustín Maciel", tag: "Volante", club: "Club Atlético Claypole", link: "https://www.instagram.com/p/DSvPUUdEWwP/?igsh=dG92YnI2NGtwb3R1" },
+  { img: "/jugador25-georgetta.jpeg", nombre: "Benicio Georgetta", tag: "Volante", club: "Arsenal FC", link: "https://www.instagram.com/p/DYqfacRtW2D/?igsh=azZzOGZ1aWFic3Uw" },
+  { img: "/jugador26-silvestro.jpeg", nombre: "Bautista Silvestro", tag: "Defensor", club: "Club Atlético Talleres", link: "https://www.instagram.com/p/DM1RvdQs-Al/?igsh=MWt6Mm9rYjd0aGdjMg%3D%3D" },
+];
+---
+
+<Layout title="Nuestros Representados | M-GEO Sports">
+  
+  <section class="relative bg-brand-dark text-white min-h-[50vh] flex items-center px-6 md:px-12 overflow-hidden pt-32 pb-16">
+    <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+    <div class="absolute bottom-0 right-0 w-[40rem] h-[40rem] bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <div class="container mx-auto max-w-5xl relative z-10 w-full text-center">
+      <div class="inline-flex items-center gap-3 mb-6 bg-white/5 border border-white/10 rounded-full px-5 py-2 backdrop-blur-sm max-w-full">
+        <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse shrink-0"></span>
+        <span class="text-gray-300 font-body text-[9px] md:text-[10px] tracking-widest uppercase font-bold whitespace-nowrap overflow-hidden text-ellipsis">M-GEO Sports</span>
+      </div>
+
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.05] mb-6 tracking-tighter">
+        Nuestros Representados<span class="text-brand-primary">.</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl font-light text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Jugadores representados en exclusividad bajo la gestión y estructura legal de nuestra agencia.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-[#161616] text-white px-4 md:px-6">
+    <div class="container mx-auto max-w-7xl">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3">
+        {roster.map((jugador) => (
+          <a href={jugador.link} target="_blank" rel="noopener noreferrer" class="group relative aspect-[4/5] bg-[#111] overflow-hidden cursor-pointer block rounded-sm border border-white/5 hover:border-brand-primary/40 hover:shadow-[0_10px_30px_-15px_rgba(120,22,22,0.4)] transition-all duration-500">
+            <img src={jugador.img} alt={jugador.nombre} class="absolute inset-0 w-full h-full object-cover object-top md:grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-1000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent opacity-95 md:group-hover:opacity-80 transition-opacity duration-700"></div>
+            
+            <div class="absolute bottom-0 left-0 w-full p-3 md:p-6 items-start z-20 flex flex-col">
+              <span class="bg-brand-primary text-white px-1.5 py-0.5 md:px-2 md:py-1 text-[6px] md:text-[8px] font-bold tracking-[0.2em] uppercase rounded-sm mb-2 md:mb-3 inline-block shadow-md">
+                {jugador.tag}
+              </span>
+              <h3 class="text-sm sm:text-base md:text-2xl font-heading font-bold text-white mb-1 drop-shadow-md truncate w-full">{jugador.nombre}</h3>
+              
+              <div class="w-4 md:w-6 h-[2px] bg-white md:w-0 md:group-hover:w-10 group-hover:bg-brand-primary transition-all duration-700 ease-out my-2 md:my-3"></div>
+              
+              <div class="flex items-center justify-between w-full">
+                <p class="text-[7px] md:text-[9px] font-body font-medium text-gray-300 uppercase tracking-[0.15em] truncate pr-2">{jugador.club}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4 text-brand-primary opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-500 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      
+      <div class="mt-16 flex justify-center border-t border-white/5 pt-16">
+        <a href="/sports" class="text-gray-400 hover:text-white transition-colors font-body text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-3 border-b border-gray-700 hover:border-brand-primary pb-2 group">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" /></svg>
+          Volver a MGEO Sports
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

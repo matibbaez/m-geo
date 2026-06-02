@@ -1,0 +1,61 @@
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_DDVgKadx.mjs';
+import 'piccolore';
+import { $ as $$Layout } from '../../chunks/Layout_BWCPeH_T.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$Art = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Accidentes Laborales (ART) | M-GEO Abogados" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="relative bg-brand-dark text-white pt-36 pb-24 px-6 overflow-hidden z-10 border-b border-white/5"> <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div> <div class="absolute top-0 left-1/3 w-[50rem] h-[50rem] bg-brand-primary/25 rounded-full blur-[150px] pointer-events-none z-0"></div> <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none z-0"></div> <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/15 to-transparent z-10"></div> <div class="container mx-auto max-w-6xl relative z-20"> <a href="/estudio#especialidades" class="inline-flex items-center gap-3 text-gray-400 hover:text-brand-primary font-body text-[10px] uppercase tracking-[0.3em] transition-all duration-300 mb-12 group"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-300"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path></svg>
+Volver a Especialidades
+</a> <!-- <div class="mb-6 inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-5 py-1.5 backdrop-blur-md">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+        <span class="text-gray-300 font-body text-[9px] tracking-[0.2em] uppercase font-bold block">División Riesgos del Trabajo</span>
+      </div> --> <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start"> <div class="lg:col-span-7"> <h1 class="text-5xl md:text-7xl lg:text-7xl font-heading font-bold tracking-tight leading-[1.05]"> <span class="text-brand-primary">Accidentes</span> <br> <span class="text-white italic">Laborales (ART).</span> </h1> </div> <div class="lg:col-span-5 lg:pt-4"> <div class="border-l border-brand-primary/40 pl-6 space-y-4"> <p class="text-lg md:text-xl font-light text-white leading-relaxed font-heading italic">
+"Gestión ágil y contundente para determinar las secuelas permanentes y asegurar la máxima indemnización legal."
+</p> </div> </div> </div> </div> </section> <section class="py-20 md:py-32 bg-[#F9F8F6] px-6 relative z-20"> <div class="container mx-auto max-w-6xl"> <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start"> <div class="lg:col-span-6 space-y-14 pt-4"> <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 border-b border-gray-200/80 pb-10"> <div class="space-y-2"> <h3 class="font-heading font-bold text-base text-brand-dark tracking-tight">¿A quién está dirigido?</h3> <p class="text-gray-600 font-light text-sm leading-relaxed">
+A trabajadores/as que hayan sufrido un accidente laboral y/o padezcan una enfermedad profesional.
+</p> </div> <div class="space-y-2"> <h3 class="font-heading font-bold text-base text-brand-dark tracking-tight">¿Qué es el % de incapacidad?</h3> <p class="text-gray-600 font-light text-sm leading-relaxed">
+Es la evaluación donde se determinan las secuelas permanentes que te quedaron a causa de la lesión.
+</p> </div> <div class="space-y-2"> <h3 class="font-heading font-bold text-base text-brand-dark tracking-tight">Tiempos del trámite</h3> <p class="text-gray-600 font-light text-sm leading-relaxed">
+Una vez presentada la documentación, corre un plazo de 60 días hábiles (prorrogable por 30 más).
+</p> </div> <div class="space-y-2"> <h3 class="font-heading font-bold text-base text-brand-dark tracking-tight">¿Si no hay acuerdo?</h3> <p class="text-gray-600 font-light text-sm leading-relaxed">
+Iniciamos la demanda judicial para reclamar lo que corresponde legalmente en relación al caso.
+</p> </div> </div> <div class="space-y-6"> <div class="space-y-3 border-l-2 border-brand-primary pl-5"> <span class="text-brand-primary font-body font-bold tracking-[0.2em] uppercase text-[10px] block">Ruta Legal</span> <h2 class="text-2xl md:text-3xl font-heading font-bold text-brand-dark tracking-tight leading-snug">
+¿Cómo es el procedimiento en la SRT?
+</h2> <p class="text-xs text-gray-400 font-light">(Superintendencia de Riesgos del Trabajo) para determinar la incapacidad del trabajador.</p> </div> <div class="space-y-6 pt-2 pl-1 border-l border-gray-200 ml-1"> <div class="pl-5 space-y-1"> <span class="font-body font-bold text-xs text-brand-dark block">1) Inicio del trámite</span> <p class="text-gray-600 font-light text-sm md:text-base">
+Iniciamos el trámite virtual en las comisiones médicas.
+</p> </div> <div class="pl-5 space-y-1 pt-2 border-t border-gray-100"> <span class="font-body font-bold text-xs text-brand-dark block">2) Dictamen Médico</span> <p class="text-gray-600 font-light text-sm md:text-base">
+Citan al trabajador a una vista médica y días después se emite el dictamen médico determinando el porcentaje de incapacidad.
+</p> </div> <div class="pl-5 space-y-3 pt-2 border-t border-gray-100"> <span class="font-body font-bold text-xs text-brand-dark block">3) Situaciones posteriores</span> <p class="text-gray-600 font-light text-sm md:text-base">
+Luego hay dos situaciones:
+</p> <div class="space-y-3 pt-1"> <div class="bg-white p-4 rounded-sm border border-gray-100 shadow-sm"> <span class="text-brand-primary font-bold text-xs block mb-1">a) Si el trabajador SÍ tiene incapacidad:</span> <p class="text-gray-600 font-light text-xs md:text-sm">
+Se fija una audiencia de homologación para definir el monto de la indemnización.
+</p> </div> <div class="bg-white p-4 rounded-sm border border-gray-100 shadow-sm"> <span class="text-brand-dark font-bold text-xs block mb-1">b) Si el trabajador NO tiene incapacidad:</span> <p class="text-gray-600 font-light text-xs md:text-sm">
+Se clausura el procedimiento administrativo y queda habilitado para iniciar la demanda judicial.
+</p> </div> </div> </div> </div> </div> <div class="pt-6 border-t border-gray-200 flex items-center gap-4"> <div class="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-md">
+MG
+</div> <div> <p class="text-xs font-bold text-brand-dark uppercase tracking-wider font-body">M-GEO Abogados</p> <p class="text-xs text-gray-400 font-light">Patrocinio letrado obligatorio garantizado.</p> </div> </div> </div> <div class="lg:col-span-6 lg:sticky lg:top-32"> <div class="bg-gradient-to-br from-brand-dark via-[#161616] to-brand-dark text-white border border-brand-primary/20 shadow-2xl p-8 md:p-12 rounded-sm relative overflow-hidden group"> <div class="absolute -top-20 -right-20 w-60 h-60 bg-brand-primary/20 rounded-full blur-[80px] pointer-events-none z-0"></div> <div class="relative z-10 mb-8 border-b border-white/10 pb-6"> <div class="inline-block bg-brand-primary text-white font-body font-bold text-[9px] px-2.5 py-1 uppercase tracking-widest rounded-sm mb-3">
+Cobertura Integral
+</div> <h3 class="text-2xl md:text-3xl font-heading font-bold text-white tracking-tight">Reclamos ART</h3> </div> <div class="relative z-10 space-y-4 text-gray-200 font-light text-base md:text-lg leading-relaxed mb-8"> <p>
+Tramitamos la DETERMINACIÓN DE INCAPACIDAD en las Comisiones Médicas de la SRT, y de ser necesario los reclamos judiciales para el cobro de la indemnización por accidente o enfermedad profesional.
+</p> </div> <div class="relative z-10 mb-8"> <h4 class="text-brand-primary font-body font-bold text-[10px] uppercase tracking-widest mb-4">Documentación necesaria:</h4> <ul class="space-y-3"> <li class="flex items-start gap-3 bg-white/[0.02] p-3 rounded-sm border border-white/5"> <svg class="w-4 h-4 text-brand-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> <span class="text-gray-200 text-xs md:text-sm font-light leading-snug">Alta médica.</span> </li> <li class="flex items-start gap-3 bg-white/[0.02] p-3 rounded-sm border border-white/5"> <svg class="w-4 h-4 text-brand-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> <span class="text-gray-200 text-xs md:text-sm font-light leading-snug">Último recibo de sueldo.</span> </li> <li class="flex items-start gap-3 bg-white/[0.02] p-3 rounded-sm border border-white/5"> <svg class="w-4 h-4 text-brand-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> <span class="text-gray-200 text-xs md:text-sm font-light leading-snug">Foto de DNI.</span> </li> <li class="flex items-start gap-3 bg-white/[0.02] p-3 rounded-sm border border-white/5"> <svg class="w-4 h-4 text-brand-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg> <span class="text-gray-200 text-xs md:text-sm font-light leading-snug">Formularios firmados <span class="text-gray-400 italic">(se los enviamos nosotros)</span>.</span> </li> </ul> </div> <div class="relative z-10 bg-brand-primary/10 border-l-2 border-brand-primary p-5 my-6 rounded-r-sm"> <div class="flex items-center gap-2 text-brand-primary font-bold text-[10px] uppercase tracking-widest mb-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"></path></svg>
+Importante
+</div> <p class="text-xs md:text-sm font-light text-gray-300 leading-relaxed">
+El reclamo <strong>NO es contra tu empleador</strong>. Es independiente y se realiza contra la ART. Es requisito obligatorio contar con patrocinio letrado para este trámite.
+</p> </div> <div class="relative z-10 mt-10 pt-6 border-t border-white/10 flex flex-col items-center"> <a href="https://wa.me/541139083310" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-primary text-white py-4 font-body font-bold uppercase tracking-[0.2em] text-[11px] hover:bg-white hover:text-brand-dark transition-all duration-500 shadow-xl text-center block">
+Iniciar Reclamo ART
+</a> </div> </div> </div> </div> </div> </section> ` })}`;
+}, "E:/mg-estudio/mg-propuesta/src/pages/areas/art.astro", void 0);
+
+const $$file = "E:/mg-estudio/mg-propuesta/src/pages/areas/art.astro";
+const $$url = "/areas/art";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Art,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
