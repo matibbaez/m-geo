@@ -36,6 +36,17 @@ const formatearNombre = (texto: string) => {
     .map((palabra: string) => palabra.charAt(0).toUpperCase() + palabra.slice(1))
     .join(' ');
 };
+
+// NUEVO: Función para formatear la fecha con estilo elegante
+const formatearFecha = (fechaISO: string) => {
+  if (!fechaISO) return '';
+  const fecha = new Date(fechaISO);
+  return new Intl.DateTimeFormat('es-AR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  }).format(fecha);
+};
 ---
 
 <Layout title="M-GEO | Matías Georgetta - Excelencia Legal y Gestión Deportiva">
@@ -44,8 +55,8 @@ const formatearNombre = (texto: string) => {
     <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
     <div class="absolute inset-0 z-0 bg-linear-to-b from-brand-dark via-transparent to-brand-dark"></div>
     
-    <div class="absolute -top-[10%] -left-[10%] w-160 h-160 bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
-    <div class="absolute -bottom-[10%] -right-[10%] w-160 h-160 bg-brand-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="hidden md:block absolute -top-[10%] -left-[10%] w-160 h-160 bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
+    <div class="hidden md:block absolute -bottom-[10%] -right-[10%] w-160 h-160 bg-brand-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="container mx-auto max-w-5xl relative z-10 text-center px-6">
       <div class="mb-10 inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-2 backdrop-blur-md">
@@ -138,9 +149,8 @@ const formatearNombre = (texto: string) => {
   <section id="unidades" class="py-24 md:py-32 relative overflow-hidden bg-brand-dark px-6">
     <div class="absolute inset-0 z-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
     
-    <div class="absolute top-[28%] md:top-1/2 left-1/2 md:left-[30%] -translate-x-1/2 -translate-y-1/2 w-120 h-120 md:w-180 md:h-180 bg-brand-primary/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
-    
-    <div class="absolute top-[78%] md:top-1/2 left-1/2 md:left-[70%] -translate-x-1/2 -translate-y-1/2 w-120 h-120 md:w-180 md:h-180 bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="hidden md:block absolute top-[28%] md:top-1/2 left-1/2 md:left-[30%] -translate-x-1/2 -translate-y-1/2 w-120 h-120 md:w-180 md:h-180 bg-brand-primary/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="hidden md:block absolute top-[78%] md:top-1/2 left-1/2 md:left-[70%] -translate-x-1/2 -translate-y-1/2 w-120 h-120 md:w-180 md:h-180 bg-brand-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-px bg-linear-to-r from-transparent via-white/5 to-transparent z-10"></div>
 
@@ -238,7 +248,8 @@ const formatearNombre = (texto: string) => {
 
             <div class="border-t border-white/10 pt-5 mt-auto flex justify-between items-end gap-4 pointer-events-none">
               <div>
-                <h4 class="text-white font-heading font-bold text-lg">{formatearNombre(resena.nombre)}</h4>
+                <h4 class="text-white font-heading font-bold text-lg leading-tight">{formatearNombre(resena.nombre)}</h4>
+                <p class="text-gray-500 font-light text-[10px] mt-1 capitalize tracking-wide">{formatearFecha(resena.created_at)}</p>
               </div>
               <span class="text-[8px] uppercase tracking-[0.2em] text-brand-primary font-body font-bold bg-brand-primary/10 px-3 py-1.5 rounded-sm whitespace-nowrap">
                 {resena.unidad}
